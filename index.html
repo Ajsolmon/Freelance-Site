@@ -2,16 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SteamFlex</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Andada&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0a4a30c70c.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
     
+    <title>SteamFlex</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Andada&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/0a4a30c70c.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://apis.google.com/js/api:client.js"></script>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=748538615707937&autoLogAppEvents=1" nonce="IaWGEfVL"></script>
+        
+
     <header class="header" >
         <nav id="headered">
 
@@ -64,15 +77,56 @@
             </h4>
 
             <div id="buttonDivI">
-                <button id="buttonI">Sign Up It's Free <i class="fas fa-angle-double-right" id="arrowRight"></i></button>
+                <button id="buttonI">Get Started<i class="fas fa-angle-double-right" id="arrowRight"></i></button>
             </div>
-            
 
         </div>
 
+        <div id="loginModal">
+            <div id="modal">
+                <h1>Log in to your account</h1>
+
+                <p>New to SteamFlex? <span id="modalLinks">Create a free account</span></p>
+
+                <div id="closemodal">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+
+                <div id="socLogins">
+                    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width="250"></div>                                    
+
+                    <div>
+                        <div id="gSignInWrapper">
+                            <div id="customBtn" class="customGPlusSignIn">
+                              <span class="icon"></span>
+                              <span class="buttonText">Log in with Google</span>
+                            </div>
+                        </div>
+                        <div id="name"></div>
+                    </div>
+
+                </div>
+
+                <p id="loginChoice">or you can login with your email address</p>
+
+                <form id="loginform">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required id="email" placeholder="Email Address">
+
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" required id="password" placeholder="Password">
+                    
+                    <input type="submit" value="Log In" id="loginButton">
+
+                    <p>By logging in, you agree to our <span id="modalLinks">Terms & Conditions</span> and <span id="modalLinks">Privacy Policy</span></p>
+                </form>
+
+            </div>
+        </div>
+
         <div id="sectionII">
+
             <h2>Freelancers you can always bank on</h2>
-            
         </div>
 
     </main>
@@ -134,5 +188,7 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    
 </body>
 </html>

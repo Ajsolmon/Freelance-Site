@@ -23,7 +23,7 @@
 .header{
     position: fixed;
     width: 100%;
-    background-color: #d0eefd;
+    background-color: transparent;
     z-index: 50;
     transition: all 0.5s;
 }
@@ -31,7 +31,7 @@
 header.active{
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    background-color: #d0eefd;
     z-index: 50;
     transition: all 0.5s;
 }
@@ -64,6 +64,147 @@ nav{
     margin: 0 0.9rem;
     font-size: 0.9rem;
 }
+
+.topbarItems:hover{
+    text-decoration: underline;
+    color: #03032e;
+    cursor: pointer;
+}
+
+
+
+
+/* SIGN IN MODAL */
+#loginModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(99, 186, 230, 0.9);
+    display: grid;
+    place-items: center;
+}
+
+#modal{
+    width: 50%;
+    min-height: 70%;
+    max-height: 100vh;
+    padding: 2.5rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    background-color: #c5e5f5;
+    box-shadow: 0 0 5px #0a0808;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#modal h1, #modal p{
+    align-self: start;
+    margin: 0 0 1rem 10%;
+}
+
+#socLogins{
+    width: 80%;
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 0 10%;
+}
+
+
+
+/* GOOGLE LOGIN BUTTON */
+#customBtn {
+    display: inline-block;
+    background: #1877F2;
+    color: white;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px grey;
+    white-space: nowrap;
+}
+
+  #customBtn:hover {
+    cursor: pointer;
+  }
+  span.icon {
+    background: url('https://developers.google.com/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 40px;
+  }
+  span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+
+#loginChoice{
+    padding-top: 20px;
+}
+
+
+#modal p:nth-child(5){
+    align-self: center;
+    margin-left: 0;
+}
+
+#loginform{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#modalLinks{
+    color: #1640f7;
+}
+
+#loginform input{
+    padding: 20px 10px;
+    border-radius: 3px;
+    border: none;
+    margin: 5px 0 15px 0;
+}
+
+#loginform label{
+    font-size: 13px;
+}
+
+#closemodal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#closemodal:hover{
+    transform: rotate(180deg);
+}
+
+#loginButton:hover{
+    cursor: not-allowed;
+}
+
+
+
+
 
 
 /* SECTION 1 */
