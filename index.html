@@ -43,7 +43,7 @@
             </div>
 
             <div>
-                <span class="topbarItems">Login</span>
+                <span class="topbarItems" onclick='openLoginModal()' >Login</span>
                 <span class="topbarItems">Meet The Experts</span>
                 <span class="topbarItems">Reviews</span>
             </div>
@@ -111,12 +111,12 @@
 
                 <form id="loginform">
                     <label for="email">Email</label>
-                    <input type="email" name="email" required id="email" placeholder="Email Address">
+                    <input type="email" name="email" required id="emailInput" placeholder="Email Address">
 
                     <label for="Password">Password</label>
                     <input type="password" name="password" required id="password" placeholder="Password">
                     
-                    <input type="submit" value="Log In" id="loginButton">
+                    <input type="submit" value="Log In" disabled id="loginButton">
 
                     <p>By logging in, you agree to our <span id="modalLinks">Terms & Conditions</span> and <span id="modalLinks">Privacy Policy</span></p>
                 </form>
@@ -125,7 +125,6 @@
         </div>
 
         <div id="sectionII">
-
             <h2>Freelancers you can always bank on</h2>
         </div>
 

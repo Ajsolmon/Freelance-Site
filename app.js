@@ -13,6 +13,7 @@ window.onscroll = function(){
 
 let toggleCount = 0
 
+//MOBILE NAV BAR
 toggle.addEventListener('click', function(){
     toggleCount++
     const headBackground  = document.getElementById('headered')
@@ -30,7 +31,7 @@ toggle.addEventListener('click', function(){
 
 
 
-// TO RENDER THE GOOGLE BUTTON
+// TO RENDER THE GOOGLE LOGIN BUTTON
 var googleUser = {};
 var startApp = function() {
   gapi.load('auth2', function(){
@@ -58,8 +59,7 @@ function attachSignin(element) {
 startApp();
 
 
-// TO RENDER FB LOGIN
-
+// TO RENDER FB LOGIN BUTTON
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '{748538615707937}',
@@ -79,3 +79,48 @@ window.fbAsyncInit = function() {
    js.src = "https://connect.facebook.net/en_US/sdk.js";
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
+
+
+
+//TO VALIDATE LOGIN FORM
+const emailfield = document.getElementById('emailInput')
+const password = document.getElementById('password')
+const loginButton = document.getElementById('loginButton')
+
+let emailTrue = false;
+let passwordTrue = false;
+
+
+emailfield.addEventListener('input', function(e){
+  const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  const emailValue = e.target.value
+  const emailValidity = pattern.test(emailValue)
+
+  if(emailValidity){
+    emailTrue = true
+  }
+})
+
+password.addEventListener('input', function(e){
+  const passwordlength = e.target.value.length
+  if(passwordlength>=8 && passwordlength<=12){
+    passwordTrue = true
+    if(emailTrue === true && passwordTrue === true){
+      loginButton.disabled = false
+    }
+  }else{
+    loginButton.disabled = true
+  }
+})
+
+//TO DISPLAY OR NOT THE LOGIN MODAL
+const closeLoginModal = document.getElementById('loginModal')
+const closeLoginModalIcon = document.getElementById('closemodal')
+closeLoginModalIcon.addEventListener('click', function(){
+  closeLoginModal.style.display = 'none'
+})
+
+function openLoginModal(){
+  closeLoginModal.style.display = 'grid'
+}
+
