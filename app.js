@@ -312,3 +312,8 @@ tyler[7].addEventListener('click', function(){
   tyler[6].style.opacity = 0.5
   tyler[7].style.opacity = 1
 })
+
+
+
+//ANIMATE SX5 CAROUSEL
+// 

@@ -63,20 +63,29 @@ nav{
 }
 
 .topbarItems{
+    position: relative;
+    display: inline-block;
     cursor: pointer;
     margin: 0 0.9rem;
-    font-size: 1.05rem;
-    border-bottom: none;
-    transition: 0.4s ease-in;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding-bottom: 4px;        /*to make some space for the overflow hidden and prevent the border div from being hidden*/
+    overflow: hidden;
 }
 
-
-.topbarItems:hover{
-    padding-bottom: 1.5px;
-    border-radius: 1px;
-    border-bottom: 2px solid black;
+.topbarborder{  
+    position: absolute;
+    bottom: 2px;
+    left: -100%;
+    background: black;
+    width: 100%;
+    height: 2px;
+    transition: left 0.5s;
 }
 
+.topbarItems:hover .topbarborder{
+    left: 0;
+}
 
 
 
@@ -270,13 +279,15 @@ nav{
 #buttonI{
     font-weight: 600;
     padding: 0.8rem 1.8rem;
-    background-color: #d44cd4;
-    color: black;
+    background-color: #7e5202;
+    color: white;
+    text-shadow: 0 0 2px white;
+    letter-spacing: 1.5px;
     border: none;
     outline: none;
-    border: 2px solid rgba(0,0,0,0.7);
+    border: 2px solid #000000b3;
     border-radius: 4px;
-    box-shadow: 0 0 4px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 0 4px 2px #0000004d;
     transition: 1s;
 }
 
@@ -532,7 +543,7 @@ nav{
     display: grid;
     grid-template-columns: 60% auto;
     align-items: center;
-    padding: 10px 200px;
+    padding: 10px 100px;
 }
 
 .secivimgdiv{
@@ -542,6 +553,7 @@ nav{
 }
 
 .secivtextdiv{
+    width: 100%;
     height: 55vh;
     display: grid;
     grid-template-columns: auto auto;
@@ -563,11 +575,135 @@ nav{
     cursor: pointer;
 }
 
-.secivtextdiv div:hover i{
+.secivtextdiv div i{
     transition: margin-left 0.3s;
+}
+
+.secivtextdiv div:hover i{
     margin-left: 5px;
 }
 
+
+
+
+
+
+.sectionV{
+    width: 100%;
+    padding: 100px 20px;
+    height: auto;
+}
+
+.sectionV h1{
+    text-align: center;
+}
+
+.carousel-circle-div{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 40px auto;
+}
+
+.carousel-circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e0dbc9;
+    margin: 0 10px;
+}
+
+.carousel-image-div{
+    overflow: hidden;
+    outline: 1px solid black;
+}
+
+.carousel-image{
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    outline: 1px solid black;
+    /* animation: slider 20s infinite; */
+}
+
+.carousel-image img{
+    width: 25%;
+    float: left;
+    outline: 1px solid orange;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    
+    20%{
+        left: 0;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    45%{
+        left: -100%;
+    }
+
+    50%{
+        left: -200%;
+    }
+
+    70%{
+        left: -200%;
+    }
+
+    75%{
+        left: -300%;
+    }
+
+    100%{
+        left: -400%;
+    }
+}
+
+.slidermaindiv{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 65%;
+}
+
+.sliderdiv{
+    position: relative;
+    width: 500%;
+    display: flex;
+    left: 0;
+    flex-direction: row;
+    animation: slider 20s infinite;
+}
+
+.slider{
+    width: 20%;
+    height: 400px;
+}
+
+.slider:nth-of-type(1){
+    background: red;
+}
+
+.slider:nth-of-type(2){
+    background: yellow;
+}
+.slider:nth-of-type(3){
+    background: green;
+}
+.slider:nth-of-type(4){
+    background: black;
+    
+}
+.slider:nth-of-type(5){
+    background: purple;
+}
 
 
 
