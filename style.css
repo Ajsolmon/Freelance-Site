@@ -610,7 +610,7 @@ nav{
     height: 15px;
     border-radius: 50%;
     background-color: #e0dbc9;
-    margin: 0 10px;
+    margin: 0 7px;
 }
 
 .carousel-image-div{
@@ -638,28 +638,78 @@ nav{
         left: 0;
     }
     
-    20%{
+    15%{
         left: 0;
     }
 
-    25%{
+    21.25%{
         left: -100%;
     }
 
-    45%{
+    36.25%{
         left: -100%;
     }
 
-    50%{
+    42.5%{
         left: -200%;
     }
 
-    70%{
+    57.5%{
         left: -200%;
     }
 
-    75%{
+    63.75%{
         left: -300%;
+    }
+
+    78.75%{
+        left: -300%;
+    }
+
+    85%{
+        left: -400%;
+    }
+
+    100%{
+        left: -400%;
+    }
+}
+
+@keyframes slidercircles{
+    0%{
+        left: 0;
+    }
+    
+    15%{
+        left: 0;
+    }
+
+    21.25%{
+        left: -100%;
+    }
+
+    36.25%{
+        left: -100%;
+    }
+
+    42.5%{
+        left: -200%;
+    }
+
+    57.5%{
+        left: -200%;
+    }
+
+    63.75%{
+        left: -300%;
+    }
+
+    78.75%{
+        left: -300%;
+    }
+
+    85%{
+        left: -400%;
     }
 
     100%{
@@ -679,7 +729,7 @@ nav{
     display: flex;
     left: 0;
     flex-direction: row;
-    animation: slider 20s infinite;
+    /* animation: slider 10s infinite; */
 }
 
 .slider{

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Divr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+/* 
+.slick-carousel{
+    width: fit-content;
+    margin: 10px 100px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, gray, transparent 15%), linear-gradient(to left, gray, transparent 5%);
+}
+.slick-carousel::before{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+}
+.slick-carousel::after{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.slickdiv{
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 450px;
+    margin: 0 10px;
+    outline: 1px solid green;
+    font-size: 2em;
+    background-color: rgb(31, 196, 196);
+    opacity: 0.3;
+} */
+    </style>
+</head>
+<body>
+
+    <!-- <div class="slick-carousel multiple-items">
+        <div class="slickdiv">1</div>
+        <div class="slickdiv">2</div>
+        <div class="slickdiv">3</div>
+        <div class="slickdiv">4</div>
+        <div class="slickdiv">5</div>
+        <div class="slickdiv">6</div>
+        <div class="slickdiv">7</div>
+        <div class="slickdiv">8</div>
+    </div> -->
+
+    <section id="slideshower">
+        <div class="slicker">
+            <div>uncle 1</div>
+            <div>uncle 2</div>
+            <div>uncle 3</div>
+        </div>
+    </section>
+
+    <script>
+
+        $(document).ready(() =>{
+            $('#slideshower .slicker').slick();
+        });
+
+    </script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

@@ -316,4 +316,11 @@ tyler[7].addEventListener('click', function(){
 
 
 //ANIMATE SX5 CAROUSEL
-// 
+let carouselanim = document.querySelector('.sliderdiv')
+carouselanim.addEventListener('click', function(){
+  console.log('clicked')
+})
+function  sliderdiv(){
+  carouselanim.style.left = '-100%'
+}
+setInterval(sliderdiv(), 10000)
