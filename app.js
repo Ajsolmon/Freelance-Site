@@ -315,12 +315,155 @@ tyler[7].addEventListener('click', function(){
 
 
 
-//ANIMATE SX5 CAROUSEL
-let carouselanim = document.querySelector('.sliderdiv')
-carouselanim.addEventListener('click', function(){
-  console.log('clicked')
+//ANIMATE SECTION V CAROUSEL
+
+let leftstyle = 0
+
+let sliderDivWidth = 500
+
+let sliderWidthIncrement = 5
+
+let indexCount = -1
+
+let carouselControl = 100
+
+let carouselControlCounter = -1
+
+const carouselanim = document.getElementById('sliderdiv')
+const carouselslides = document.getElementsByClassName('slider')
+
+let sliderWidth;
+const root = document.documentElement       //to access the css variables
+const carouselCircle = document.getElementsByClassName('carousel-circle')
+
+carouselCircle[0].style.backgroundColor = 'orange'        //initialize the carousel counter circles
+
+carouselCircle[0].addEventListener('click', ()=>{
+    carouselCircle[0].style.backgroundColor = 'orange'
+    carouselCircle[1].style.backgroundColor = '#e0dbc9'
+    carouselCircle[2].style.backgroundColor = '#e0dbc9'
+    carouselCircle[3].style.backgroundColor = '#e0dbc9'
+    carouselCircle[4].style.backgroundColor = '#e0dbc9'
+
+    leftstyle = undefined
+    carouselanim.style.left = 0 + '%'
+    carouselControlCounter = undefined
 })
-function  sliderdiv(){
-  carouselanim.style.left = '-100%'
-}
-setInterval(sliderdiv(), 10000)
+
+carouselCircle[1].addEventListener('click', ()=>{
+    carouselCircle[1].style.backgroundColor = 'orange'
+    carouselCircle[0].style.backgroundColor = '#e0dbc9'
+    carouselCircle[2].style.backgroundColor = '#e0dbc9'
+    carouselCircle[3].style.backgroundColor = '#e0dbc9'
+    carouselCircle[4].style.backgroundColor = '#e0dbc9'
+    leftstyle = undefined
+    carouselanim.style.left = -100 + '%'
+    carouselControlCounter = undefined
+})
+
+carouselCircle[2].addEventListener('click', ()=>{
+    carouselCircle[2].style.backgroundColor = 'orange'
+    carouselCircle[0].style.backgroundColor = '#e0dbc9'
+    carouselCircle[1].style.backgroundColor = '#e0dbc9'
+    carouselCircle[3].style.backgroundColor = '#e0dbc9'
+    carouselCircle[4].style.backgroundColor = '#e0dbc9'
+    leftstyle = undefined
+    carouselanim.style.left = -200 + '%'
+    carouselControlCounter = undefined
+})
+
+carouselCircle[3].addEventListener('click', ()=>{
+    carouselCircle[3].style.backgroundColor = 'orange'
+    carouselCircle[0].style.backgroundColor = '#e0dbc9'
+    carouselCircle[1].style.backgroundColor = '#e0dbc9'
+    carouselCircle[2].style.backgroundColor = '#e0dbc9'
+    carouselCircle[4].style.backgroundColor = '#e0dbc9'
+    leftstyle = undefined
+    carouselanim.style.left = -300 + '%'
+    carouselControlCounter = undefined
+})
+
+carouselCircle[4].addEventListener('click', ()=>{
+    carouselCircle[4].style.backgroundColor = 'orange'
+    carouselCircle[0].style.backgroundColor = '#e0dbc9'
+    carouselCircle[1].style.backgroundColor = '#e0dbc9'
+    carouselCircle[2].style.backgroundColor = '#e0dbc9'
+    carouselCircle[3].style.backgroundColor = '#e0dbc9'
+    leftstyle = undefined
+    carouselanim.style.left = -400 + '%'
+    carouselControlCounter = undefined
+})
+
+setInterval(function(){
+    indexCount = -1
+    carouselControlCounter = -1
+}, 50001)
+
+setInterval(function(){
+    carouselanim.style.left = 0 + '%'
+    indexCount = -1
+    leftstyle = 0
+    sliderDivWidth = 500
+    sliderWidthIncrement = 5
+
+    while(carouselslides.length > 5){
+        carouselslides[5].parentNode.removeChild(carouselslides[5])
+    }
+}, 1000001)  //this is to prevent the slide width from glitching
+
+setInterval(() => {
+indexCount += 1
+carouselControlCounter +=1
+
+    switch(carouselControlCounter){
+        case 0:
+            carouselCircle[1].style.backgroundColor = 'orange'
+            carouselCircle[0].style.backgroundColor = '#e0dbc9'
+            carouselCircle[2].style.backgroundColor = '#e0dbc9'
+            carouselCircle[3].style.backgroundColor = '#e0dbc9'
+            carouselCircle[4].style.backgroundColor = '#e0dbc9'
+            break;
+        case 1:
+            carouselCircle[2].style.backgroundColor = 'orange'
+            carouselCircle[0].style.backgroundColor = '#e0dbc9'
+            carouselCircle[1].style.backgroundColor = '#e0dbc9'
+            carouselCircle[3].style.backgroundColor = '#e0dbc9'
+            carouselCircle[4].style.backgroundColor = '#e0dbc9'
+            break;
+        case 2:
+            carouselCircle[3].style.backgroundColor = 'orange'
+            carouselCircle[0].style.backgroundColor = '#e0dbc9'
+            carouselCircle[1].style.backgroundColor = '#e0dbc9'
+            carouselCircle[2].style.backgroundColor = '#e0dbc9'
+            carouselCircle[4].style.backgroundColor = '#e0dbc9'
+            break;
+        case 3:
+            carouselCircle[4].style.backgroundColor = 'orange'
+            carouselCircle[0].style.backgroundColor = '#e0dbc9'
+            carouselCircle[1].style.backgroundColor = '#e0dbc9'
+            carouselCircle[2].style.backgroundColor = '#e0dbc9'
+            carouselCircle[3].style.backgroundColor = '#e0dbc9'
+            break;
+        case 4:
+            carouselCircle[0].style.backgroundColor = 'orange'
+            carouselCircle[1].style.backgroundColor = '#e0dbc9'
+            carouselCircle[2].style.backgroundColor = '#e0dbc9'
+            carouselCircle[3].style.backgroundColor = '#e0dbc9'
+            carouselCircle[4].style.backgroundColor = '#e0dbc9'
+    }
+
+    let newDiv  = document.getElementsByClassName('slider')[indexCount]
+    let divClones = newDiv.cloneNode(true)
+    // newDiv.id = colorIdArr[indexCount]
+    carouselanim.appendChild(divClones)
+
+    sliderDivWidth+=100
+    sliderWidthIncrement+=1
+    sliderWidth = ((1/sliderWidthIncrement)*100).toFixed(10)
+
+    root.style.setProperty('--mainwidth', sliderDivWidth + '%');
+    root.style.setProperty('--sectionwidth', sliderWidth + '%');
+
+    leftstyle -= 100 
+    carouselanim.style.left = leftstyle + '%'
+}, 10000);
