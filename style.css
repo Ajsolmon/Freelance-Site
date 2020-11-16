@@ -279,7 +279,7 @@ nav{
 #buttonI{
     font-weight: 600;
     padding: 0.8rem 1.8rem;
-    background-color: #7e5202;
+    background-color: #022235;
     color: white;
     text-shadow: 0 0 2px white;
     letter-spacing: 1.5px;
@@ -328,11 +328,6 @@ nav{
     justify-content: space-evenly; */
 }
 
-.sec2icon1:hover,.sec2icon2:hover,.sec2icon3:hover i{
-    transition: transform 0.2s;
-    transform: scale(1.5);
-}
-
 .sec2icon1{
     display: grid;
     place-items: center;
@@ -366,9 +361,19 @@ nav{
     margin-bottom: 20px;
 }
 
-.sec2eldivs i{
-    font-size: 35px;
-    color: #555d5e;
+.sec2icon1:hover #filterIcon{
+    transition: transform 0.2s;
+    transform: scale(1.5);
+}
+
+.sec2icon2:hover #clockIcon{
+    transition: transform 0.2s;
+    transform: scale(1.5);
+}
+
+.sec2icon3:hover #taskIcon{
+    transition: transform 0.2s;
+    transform: scale(1.5);
 }
 
 .sec2eldivs h2{
@@ -483,16 +488,14 @@ nav{
     border-radius: 4px;
 }
 
-.extraexpertdetails > i{
+.extraexpertdetails > .allicons{
     font-size: initial;
     margin-left: 5px;
     transition: 0.2s;
 }
 
-.extraexpertdetails:hover i{
-    font-size: initial;
+.extraexpertdetails:hover .allicons{
     margin-left: 10px;
-    transition: 0.2s;
 }
 
 .featuredexperts{
@@ -572,7 +575,7 @@ nav{
 }
 
 
-.secivtextdiv div{
+.VAS{
     justify-self: flex-start;
     font-size: 21px;
     padding-bottom: 5px;
@@ -580,12 +583,9 @@ nav{
     cursor: pointer;
 }
 
-.secivtextdiv div i{
-    transition: margin-left 0.3s;
-}
-
-.secivtextdiv div:hover i{
+.VAS:hover #arrowIconsxnIV{
     margin-left: 5px;
+    transition: margin-left 0.2s;
 }
 
 
@@ -603,6 +603,27 @@ nav{
     text-align: center;
 }
 
+.sliderName{
+    position: absolute;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.sliderName h1{
+    font-size: 30px;
+}
+
+.sliderName hr{
+    border: none;
+    margin: 15px 0 10px 0;
+    background: white;
+    width: 100px;
+    height: 3px;
+}
+
 :root{
     --mainwidth: 500%;
     --sectionwidth: 20%;
@@ -613,7 +634,6 @@ nav{
     overflow: hidden;
     width: 65%;
     height: 600px;
-    /* outline: 1px solid black; */
 }
 
 .sliderdiv{
@@ -630,8 +650,9 @@ nav{
     height: 400px;
     display: grid;
     place-items: center;
-    color: blue;
+    color: black;
     position: relative;
+    border-radius: 10px;
 }
 .carousel-circle-div{
     display: flex;
@@ -649,33 +670,39 @@ nav{
     cursor: pointer;
 }
 
-#idred{background: red;}
+#idred{background: #B1B0B7;}
 
-#idyellow{background: yellow;}
+#idyellow{background: #B1B0B7;}
 
-#idgreen{background: green;}
+#idgreen{background: #B1B0B7;}
 
-#idblack{background: black;}
+#idblack{background: #B1B0B7;}
 
-#idpurple{background: purple;}
+#idpurple{background: #B1B0B7;}
 
 .sliderDescription{
     position: absolute;
-    bottom: -10%;
+    bottom: -40%;
     width: 80%;
     padding: 20px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    z-index: 200;
 }
 
 .sliderDescription p{
-    margin: 50px 0;
+    margin: 40px 0;
+    font-size: 1.2rem;
 }
 
+.sliderDescription h3{
+    margin-left: 5px;
+}
+
+
+
 hr{
-    margin: 250px auto 0 auto;
+    margin: 0px auto 0 auto;
     width: 75%;
     background-color: #e0dbc9;
 }
@@ -683,7 +710,6 @@ hr{
 .clientBrandDiv{
     margin: 0 auto;
     width: 70%;
-    height: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -691,9 +717,8 @@ hr{
 }
 
 .clientBrand{
-    width: 70px;
-    height: 80%;
-    outline: 2px solid gray;
+    margin-top: 10px;
+    width: fit-content;
 }
 
 
