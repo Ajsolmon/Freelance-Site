@@ -60,6 +60,7 @@ nav{
     font-family: 'Galada', cursive;
     font-size: 1.8rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .topbarItems{
@@ -552,21 +553,22 @@ nav{
     grid-template-columns: 60% auto;
     align-items: center;
     padding: 10px 100px;
+    position: relative;
 }
 
 .secivimgdiv{
-    outline: 1px solid white;
+    border: 1px solid white;
     margin-right: 20px;
     height: 70vh;
+    border-radius: 10px;
 }
 
 .secivtextdiv{
     width: 100%;
-    height: 55vh;
+    height: 40vh;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    
 }
 
 .secivtextdiv p{
@@ -576,16 +578,18 @@ nav{
 
 
 .VAS{
-    justify-self: flex-start;
+    position: absolute;
+    right: 27%;
+    bottom: 15%;
     font-size: 21px;
     padding-bottom: 5px;
     border-bottom: 2px solid white;
     cursor: pointer;
+    transition: margin-left 0.2s;
 }
 
 .VAS:hover #arrowIconsxnIV{
     margin-left: 5px;
-    transition: margin-left 0.2s;
 }
 
 
@@ -603,25 +607,20 @@ nav{
     text-align: center;
 }
 
-.sliderName{
-    position: absolute;
-    bottom: 20%;
+.carousel-circle-div{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+    flex-direction: row;
+    width: fit-content;
+    margin: 40px auto;
 }
 
-.sliderName h1{
-    font-size: 30px;
-}
-
-.sliderName hr{
-    border: none;
-    margin: 15px 0 10px 0;
-    background: white;
-    width: 100px;
-    height: 3px;
+.carousel-circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e0dbc9;
+    margin: 0 7px;
+    cursor: pointer;
 }
 
 :root{
@@ -654,21 +653,6 @@ nav{
     position: relative;
     border-radius: 10px;
 }
-.carousel-circle-div{
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    margin: 40px auto;
-}
-
-.carousel-circle{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #e0dbc9;
-    margin: 0 7px;
-    cursor: pointer;
-}
 
 #idred{background: #B1B0B7;}
 
@@ -680,10 +664,32 @@ nav{
 
 #idpurple{background: #B1B0B7;}
 
+.sliderName{
+    position: absolute;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.sliderName h1{
+    font-size: 30px;
+}
+
+.sliderName hr{
+    border: none;
+    margin: 15px 0 10px 0;
+    background: white;
+    width: 150px;
+    height: 3px;
+}
+
 .sliderDescription{
     position: absolute;
-    bottom: -40%;
+    bottom: -180px;
     width: 80%;
+    height: 230px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -691,12 +697,25 @@ nav{
 }
 
 .sliderDescription p{
-    margin: 40px 0;
+    margin: 30px 0;
     font-size: 1.2rem;
 }
 
 .sliderDescription h3{
-    margin-left: 5px;
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+#sxnIVarrowIcon{
+margin-left: 3px;
+}
+
+.sliderDescription h3:hover #sxnIVarrowIcon{
+    margin-left: 8px;
+    transition: margin-left 0.3s;
 }
 
 
@@ -704,22 +723,132 @@ nav{
 hr{
     margin: 0px auto 0 auto;
     width: 75%;
+    height: 1px;
     background-color: #e0dbc9;
+    border: none;
 }
 
 .clientBrandDiv{
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .clientBrand{
     margin-top: 10px;
     width: fit-content;
 }
+
+.testimonialSlider{
+    width: 95%;
+    margin: 50px auto 100px auto;
+}
+
+.gradientBG{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, white, transparent 10%), linear-gradient(to left, white, transparent 10%);
+}
+
+
+#slideshower{
+    position: relative;
+}
+
+.slicker{
+    margin: 0 auto;
+    height: 55vh;
+}
+
+.testimonials{
+    margin: 0 5px;
+    height: initial;
+    border: 1px solid #D6D4E6;
+    border-radius: 5px;
+}
+
+.testifier{
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    margin: 25px 0 35px 0;
+}
+
+.starIcons{
+    display: flex;
+    align-items: center;
+}
+
+.tName{
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.testifier .material-icons{
+    color: gold;
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.testimony{
+    padding: 0 8%;
+    font-size: 1em;
+    height: 250px;
+}
+
+
+.footdetail{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8%;
+    border-top: 1px solid #D6D4E6;
+}
+
+.footdetail img{
+    width: 60px;
+}
+
+.footdetail p{
+    font-size: 14px;
+}
+
+.slick-prev, .slick-next{
+    position: absolute;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: #00000066;
+    display: grid;
+    place-items: center;
+}
+
+.slick-next > .material-icons,.slick-prev > .material-icons {
+    font-size: 48px;
+}
+
+.slick-prev{
+    left: 5%;
+    top: 50%;
+
+}
+
+.slick-next{
+    right: 5%;
+    top: 50%;
+
+}
+
+
 
 
 
@@ -1003,6 +1132,223 @@ footer{
     right: 11px;
     bottom: 0;
 }
+
+
+
+
+/* SECTION IV */
+
+.sectionIV{
+    padding: 60px 20px;
+}
+
+.sectionIV h5{
+    margin-bottom: 40px;
+}
+
+.sectionIV h1{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.secivmaindiv{
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 0 0 15px 0;
+}
+
+.secivimgdiv{
+    width: 88vw;
+    margin-right: 0;
+    height: 50vh;
+}
+
+.secivtextdiv{
+    height: 35vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.secivtextdiv p{
+    font-size: 18px;
+    width: 140px;
+}
+
+.VAS{
+    position: absolute;
+    right: 30%;
+    bottom: -2%;
+    font-size: 21px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+    transition: margin-left 0.2s;
+}
+
+.VAS:hover #arrowIconsxnIV{
+    margin-left: 5px;
+}
+
+
+
+
+
+/* SECTION V */
+
+.sectionV{
+    padding: 85px 4%;
+    height: auto;
+}
+
+.sectionV h1{
+    line-height: 30px;
+}
+
+.carousel-circle-div{
+    margin: 50px auto 30px auto;
+}
+
+.carousel-circle{
+    width: 13px;
+    height: 13px;
+    margin: 0 10px;
+}
+        
+.slidermaindiv{
+    width: 96%;
+    height: 400px;
+}
+
+.sliderdiv{
+    position: relative;
+    width: var(--mainwidth);
+    display: flex;
+    left: 0;
+    flex-direction: row;
+    transition: left 0.5s;
+}
+
+.slider{
+    width: var(--sectionwidth);
+    height: 200px;
+    display: grid;
+    place-items: center;
+    color: black;
+    position: relative;
+    border-radius: 10px;
+}
+
+.sliderName{
+    bottom: 30%;
+}
+
+.sliderName h1{
+    font-size: 25px;
+}
+
+.sliderName h3{
+    font-size: 15px;
+}
+
+.sliderName hr{
+    margin: 5px 0 10px 0;
+}
+
+.sliderDescription{
+    bottom: -180px;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.sliderDescription p{
+    margin: 10px 0 15px 0;
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+
+hr{
+    margin: 25px auto 10px auto;
+    width: 95%;
+    background-color: #e0dbc9;
+}
+
+.clientBrandDiv{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.clientBrand{
+    margin-top: 30px;
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonialSlider{
+    width: 80%;
+}
+
+.gradientBG{
+    display: none;
+}
+
+.testimonials{
+    margin: 0;
+    border: 1px solid #D6D4E6;
+    border-radius: 5px;
+
+}
+
+.testifier{
+    justify-content: space-between;
+}
+
+.testifier .material-icons{
+    font-size: 14px;
+}
+
+.testimony{
+    font-size: 0.9em;
+    height: 260px;
+}
+
+.footdetail{
+    padding: 20px 8%;
+}
+
+.footdetail p{
+    font-size: 12px;
+}
+
+.slick-prev, .slick-next{
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+}
+
+.slick-next > .material-icons,.slick-prev > .material-icons {
+    font-size: 35px;
+}
+
+.slick-prev{
+    left: -15%;
+}
+
+.slick-next{
+    right: -15%;
+}
+
+
+
+
 
 
 
