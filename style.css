@@ -1325,21 +1325,19 @@ label::after{
 .expertbiolinkdiv{
     display: grid;
     grid-template-columns: auto auto auto;
-    column-gap: 40px;
+    justify-content: space-between;
     row-gap: 25px;
     position: relative;
-    outline: 1px solid white;
 }
 
 .expertbiolink{
-    width: 100%;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 0;
 }
 
 .expertbiolink:last-of-type{
     position: absolute;
-    width: 80px;
     right: 0;
     bottom: 0;
 }
