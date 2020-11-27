@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>SteamFlex</title>
-    
+
     <link rel="stylesheet" href="style.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Andada&display=swap" rel="stylesheet"> 
+
+
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
     <script src="https://kit.fontawesome.com/0a4a30c70c.js" crossorigin="anonymous"></script>
-    
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <script src="https://apis.google.com/js/api:client.js"></script>
@@ -27,32 +29,36 @@
 
 <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=748538615707937&autoLogAppEvents=1" nonce="IaWGEfVL"></script>
-        
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=748538615707937&autoLogAppEvents=1"
+        nonce="IaWGEfVL"></script>
 
-    <header class="header" >
+
+    <header class="header">
         <nav id="headered">
 
             <div>
                 <span class="topbarItems">How It Works <div class="topbarborder"></div> </span>
+
                 <span class="topbarItems">Pricing <div class="topbarborder"></div> </span>
+
                 <span class="topbarItems">Our Services <div class="topbarborder"></div> </span>
             </div>
 
             <div id="iconLogoDiv">
                 <span id="topLogo">SteamFlex</span>
-                <div id="controlIcons">
+                <span id="controlIcons">
                     <input id="hamburger" type="checkbox">
                     <label for="hamburger"></label>
-                </div>
+                </span>
             </div>
 
             <div>
-                <span class="topbarItems" onclick='openLoginModal()' >Login <div class="topbarborder"></div> </span>
+                <span class="topbarItems" onclick='openLoginModal()'>Login <div class="topbarborder"></div> </span>
                 <span class="topbarItems">Meet The Experts <div class="topbarborder"></div> </span>
                 <span class="topbarItems">Reviews <div class="topbarborder"></div> </span>
             </div>
-            
+
 
             <div id="mobileNav">
                 <div class="mobileItems">Home</div>
@@ -78,13 +84,16 @@
             </h1>
 
             <h4 id="headingII">
-                Unleash The Latent Potential Of Your Business With 
+                Unleash The Latent Potential Of Your Business With
                 The Best Crop Of Freelancers On The Internet.
             </h4>
 
             <div id="buttonDivI">
                 <button id="buttonI">Get Started!<i class="fas fa-angle-double-right" id="arrowRight"></i></button>
             </div>
+
+            <img src="ladysvg.svg" alt="" class="ladysvg">
+            <img src="mansvg.svg" alt="" class="mansvg">
 
         </section>
 
@@ -102,13 +111,14 @@
                 </div>
 
                 <div id="socLogins">
-                    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width="250"></div>                                    
+                    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default"
+                        data-auto-logout-link="false" data-use-continue-as="false" data-width="250"></div>
 
                     <div>
                         <div id="gSignInWrapper">
                             <div id="customBtn" class="customGPlusSignIn">
-                              <span class="icon"></span>
-                              <span class="buttonText">Log in with Google</span>
+                                <span class="icon"></span>
+                                <span class="buttonText">Log in with Google</span>
                             </div>
                         </div>
                         <div id="name"></div>
@@ -124,10 +134,11 @@
 
                     <label for="Password">Password</label>
                     <input type="password" name="password" required id="password" placeholder="Password">
-                    
+
                     <input type="submit" value="Log In" disabled id="loginButton">
 
-                    <p>By logging in, you agree to our <span id="modalLinks">Terms & Conditions</span> and <span id="modalLinks">Privacy Policy</span></p>
+                    <p>By logging in, you agree to our <span id="modalLinks">Terms & Conditions</span> and <span
+                            id="modalLinks">Privacy Policy</span></p>
                 </form>
 
             </div>
@@ -137,39 +148,39 @@
 
         <section class="sectionII">
             <h1 class="section2headtext">Freelancers you can always bank on</h1>
-            
-            <div class="section2maindiv">                
+
+            <div class="section2maindiv">
 
                 <div class="sec2eldivs">
-                    <div class="sec2icon1">
-                       <i class="fa fa-filter" id="filterIcon"></i>
+                    <div class="sec2icon1" data-aos="fade" data-aos-duration="1000">
+                        <i class="fa fa-filter" id="filterIcon"></i>
                     </div>
 
                     <h2>
                         Pre-Assessed Experts
                     </h2>
 
-                    <p>Only the top 10% of freelancers get through our 
+                    <p>Only the top 10% of freelancers get through our
                         stringent screening
                     </p>
                 </div>
-                
+
                 <div class="sec2eldivs">
-                    <div class="sec2icon2">
+                    <div class="sec2icon2" data-aos="fade" data-aos-duration="1000">
                         <i class="fa fa-clock-o" id="clockIcon" aria-hidden="true"></i>
                     </div>
 
                     <h2>Available Round The Clock</h2>
 
                     <p>
-                        As a client, You are matched with the best expert for 
-                        the job, and provided with support from project start to 
+                        As a client, You are matched with the best expert for
+                        the job, and provided with support from project start to
                         finish.
                     </p>
                 </div>
 
                 <div class="sec2eldivs">
-                    <div class="sec2icon3">
+                    <div class="sec2icon3" data-aos="fade" data-aos-duration="1000">
                         <i class="fa fa-tasks" id="taskIcon" aria-hidden="true"></i>
                     </div>
 
@@ -183,7 +194,7 @@
             </div>
         </section>
 
-
+        
 
         <section class="sectionIII">
             <div class="sec3maindiv">
@@ -195,26 +206,27 @@
                         designers, and marketers on the internet.
                     </p>
                 </div>
-    
+
                 <div class="expertinfosection">
 
                     <div class="expertAppearance">
-                        <div class="expertimgbg"></div>
-                        <img src="tyler-big.png" alt="" class="expertimg">
+                        <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-out-back" class="expertimgbg"></div>
+                        <img data-aos="fade-up-left" data-aos-duration="1000" data-aos-easing="ease-out-back" data-aos-offset="10" src="tyler-big.png" alt="" class="expertimg">
                     </div>
 
                     <div class="expertbio">
                         <h1 class="expertname">Tyler</h1>
                         <p class="expertjob">Senior Developer & Digital Strategist</p>
                         <p class="expertexp">
-                            "I have been a Wordpress expert for over 6 years. 
-                            It brings together my passion for creativity and my 
-                            entrepreneurial spirit. There is nothing more rewarding than 
+                            "I have been a Wordpress expert for over 6 years.
+                            It brings together my passion for creativity and my
+                            entrepreneurial spirit. There is nothing more rewarding than
                             the joy of bringing someone's dream and vision to fruition."
                         </p>
 
-                        <div class="extraexpertdetails">Learn More <span class="allicons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></div>
-                        
+                        <div class="extraexpertdetails">Learn More <span class="allicons"><i
+                                    class="fa fa-long-arrow-right" aria-hidden="true"></i></span></div>
+
                     </div>
 
                 </div>
@@ -242,26 +254,26 @@
 
             <h1>Here to help, whatever you need.</h1>
 
-            <div class="secivmaindiv"> 
-                <div class="secivimgdiv">
-                    <img src="" alt="" >
+            <div class="secivmaindiv">
+                <div class="secivimgdiv"  data-aos="slide-up" data-aos-duration="1000">
+                    <img src="" alt="">
                 </div>
 
-                <div class="secivtextdiv">
+                <div class="secivtextdiv"  data-aos="fade" data-aos-duration="1000">
                     <p>Build a new website</p>
                     <p>Improve your site</p>
                     <p>Debug an error</p>
                     <p>Marketing Strategy</p>
-                    
-                    <div class="VAS">View All Services <span class="material-icons">
-                        east
-                        </span></div>
-                    </div>
-                </div>
 
-            
+                    <div class="VAS">View All Services <span class="material-icons">
+                            east
+                        </span></div>
+                </div>
+            </div>
+
+
         </section>
-   
+
 
 
         <section class="sectionV">
@@ -275,9 +287,9 @@
                 <div class="carousel-circle"></a></div>
                 <div class="carousel-circle"></div>
             </div>
-        
+
             <div class="slidermaindiv">
-                
+
                 <div class="sliderdiv" id="sliderdiv">
 
                     <div class="slider" id="idred">
@@ -290,18 +302,19 @@
 
                         <div class="sliderDescription">
                             <p>
-                                " Working with Dan has been such a breeze! His positive approach, speedy response and delivery time and undeniable 
+                                " Working with Dan has been such a breeze! His positive approach, speedy response and
+                                delivery time and undeniable
                                 skills are qualities you could only dream up in a developer."
                             </p>
 
                             <h3>
-                                Read More   <span class="material-icons">
-                    east
-                    </span>
+                                Read More <span class="material-icons">
+                                    east
+                                </span>
                             </h3>
                         </div>
                     </div>
-        
+
                     <div class="slider" id="idyellow">
 
                         <div class="sliderName">
@@ -312,17 +325,18 @@
 
                         <div class="sliderDescription">
                             <p>
-                                "As a startup, we’re constantly making changes to our online store and knowing that Lorem has our back gives us the confidence to take action faster."
+                                "As a startup, we’re constantly making changes to our online store and knowing that
+                                Lorem has our back gives us the confidence to take action faster."
                             </p>
 
                             <h3>
-                                Read More   <span class="material-icons">
-                    east
-                    </span>
+                                Read More <span class="material-icons">
+                                    east
+                                </span>
                             </h3>
                         </div>
                     </div>
-        
+
                     <div class="slider" id="idgreen">
 
                         <div class="sliderName">
@@ -333,17 +347,19 @@
 
                         <div class="sliderDescription">
                             <p>
-                                "We've leaned on Lorem heavily since launching Avra. They've been our trusted partner in everything from website design, to SEO and IT troubleshooting. The time and money Lorem has saved us has been invaluable."
+                                "We've leaned on Lorem heavily since launching Avra. They've been our trusted partner in
+                                everything from website design, to SEO and IT troubleshooting. The time and money Lorem
+                                has saved us has been invaluable."
                             </p>
 
                             <h3>
-                                Read More   <span class="material-icons">
-                    east
-                    </span>
+                                Read More <span class="material-icons">
+                                    east
+                                </span>
                             </h3>
                         </div>
                     </div>
-        
+
                     <div class="slider" id="idblack">
 
                         <div class="sliderName">
@@ -354,17 +370,19 @@
 
                         <div class="sliderDescription">
                             <p>
-                                "Working with Lorem over the last year has helped us completely customize our Shopify site, sell more of everything, and grow our audience across channels. Whenever we need something done, they figure it out."
+                                "Working with Lorem over the last year has helped us completely customize our Shopify
+                                site, sell more of everything, and grow our audience across channels. Whenever we need
+                                something done, they figure it out."
                             </p>
 
                             <h3>
-                                Read More   <span class="material-icons">
-                    east
-                    </span>
+                                Read More <span class="material-icons">
+                                    east
+                                </span>
                             </h3>
                         </div>
                     </div>
-        
+
                     <div class="slider" id="idpurple">
 
                         <div class="sliderName">
@@ -375,20 +393,21 @@
 
                         <div class="sliderDescription">
                             <p>
-                                "My experience was awesome, they were high touch and the quality of work and value of that work was excellent!"
+                                "My experience was awesome, they were high touch and the quality of work and value of
+                                that work was excellent!"
                             </p>
 
                             <h3>
-                                Read More   <span class="material-icons">
-                    east
-                    </span>
+                                Read More <span class="material-icons">
+                                    east
+                                </span>
                             </h3>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <hr>              
+            <hr>
 
             <div class="clientBrandDiv">
                 <div class="clientBrand"><img src="pics\alabaster logo.png" alt=""></div>
@@ -406,10 +425,11 @@
             <div class="testimonialSlider">
 
                 <section id="slideshower">
-            
-                    <button type="button" class="slick-prev"><span class="material-icons"> chevron_left </span></button>        
-                    <button type="button" class="slick-next"><span class="material-icons"> chevron_right </span></button>
-                    
+
+                    <button type="button" class="slick-prev"><span class="material-icons"> chevron_left </span></button>
+                    <button type="button" class="slick-next"><span class="material-icons"> chevron_right
+                        </span></button>
+
                     <div class="slicker">
 
                         <div class="testimonials">
@@ -424,7 +444,10 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"Cristina was excellent to work with. She did what she said and finished on time. I will most definitely be working with Cristina and Ask Lorem again. I am extremely satisfied with both her eye for design and detail as well as her expertise and ability to do what I asked."</p>
+                                <p>"Cristina was excellent to work with. She did what she said and finished on time. I
+                                    will most definitely be working with Cristina and Ask Lorem again. I am extremely
+                                    satisfied with both her eye for design and detail as well as her expertise and
+                                    ability to do what I asked."</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_shopify.png" alt="" class="tLogo">
@@ -444,7 +467,10 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"I have been struggling with my blog for way too long. After multiple attempts seaching for the answers I finally found Steamflex. They matched me with Robin who was able to fix my problem in no time and for a really fair price. I am forever thankful! Loved my experience. So easy and painless!"</p>
+                                <p>"I have been struggling with my blog for way too long. After multiple attempts
+                                    seaching for the answers I finally found Steamflex. They matched me with Robin who
+                                    was able to fix my problem in no time and for a really fair price. I am forever
+                                    thankful! Loved my experience. So easy and painless!"</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_wordpress.svg" alt="" class="tLogo">
@@ -464,7 +490,10 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"Kerry was amazing. She gave me major advice on making my website and social media look much more professional. She also helped me on my advertisements. She was extremely responsive and answered every question I had in a few minutes. 100% recommend."</p>
+                                <p>"Kerry was amazing. She gave me major advice on making my website and social media
+                                    look much more professional. She also helped me on my advertisements. She was
+                                    extremely responsive and answered every question I had in a few minutes. 100%
+                                    recommend."</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_shopify.png" alt="" class="tLogo">
@@ -484,7 +513,8 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"Very quick to respond! Got the job done when others couldn't help me! thanks so much!"</p>
+                                <p>"Very quick to respond! Got the job done when others couldn't help me! thanks so
+                                    much!"</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_shopify.png" alt="" class="tLogo">
@@ -504,7 +534,9 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"Steamflex has been incredibly easy to use, I had a response almost instantaneously. Alan has been always available to discuss options and to adjust the project to meet my needs - I will definitely get in touch in the future!"</p>
+                                <p>"Steamflex has been incredibly easy to use, I had a response almost instantaneously.
+                                    Alan has been always available to discuss options and to adjust the project to meet
+                                    my needs - I will definitely get in touch in the future!"</p>
                             </div>
                             <div class="footdetail">
                                 <img style="height: 15px;" src="pics\testimonial_wix.png" alt="" class="tLogo">
@@ -524,7 +556,10 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"This is the second time I've used Steamflex when in a pinch, and the second time I wish I had just gone here first and saved myself some time, money, and cortisol. This service is fantastic, and as a small business owner, it's a relief to know that if I don't have a engineer on payroll I'm still covered."</p>
+                                <p>"This is the second time I've used Steamflex when in a pinch, and the second time I
+                                    wish I had just gone here first and saved myself some time, money, and cortisol.
+                                    This service is fantastic, and as a small business owner, it's a relief to know that
+                                    if I don't have a engineer on payroll I'm still covered."</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_shopify.png" alt="" class="tLogo">
@@ -544,7 +579,10 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"I am a marketing consultant and have come back to Lorem several times based on great experiences with multiple developers. I have a few go-to developers now that can turn things around literally within 24 hours at extremely reasonable cost. Highly recommend."</p>
+                                <p>"I am a marketing consultant and have come back to Lorem several times based on great
+                                    experiences with multiple developers. I have a few go-to developers now that can
+                                    turn things around literally within 24 hours at extremely reasonable cost. Highly
+                                    recommend."</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_wordpress.svg" alt="" class="tLogo">
@@ -564,7 +602,9 @@
                                 </span>
                             </div>
                             <div class="testimony">
-                                <p>"Sean is the best coder I ever worked with. He is always available for any questions and requests I have. And he always get problem fixed. Amazing experience with Steamflex"</p>
+                                <p>"Sean is the best coder I ever worked with. He is always available for any questions
+                                    and requests I have. And he always get problem fixed. Amazing experience with
+                                    Steamflex"</p>
                             </div>
                             <div class="footdetail">
                                 <img src="pics\testimonial_shopify.png" alt="" class="tLogo">
@@ -587,52 +627,67 @@
                 </span>
                 <span class="material-icons">
                     east
-                    </span>
+                </span>
             </div>
 
         </section>
 
+
         <section class="sectionVI">
 
             <h4>PRODUCTS WE SUPPORT</h4>
-            
+
             <h1>
                 Expert help for every tool you use to run your business.
             </h1>
 
             <div class="brandsSupported">
-
-                <div class="brandsLogo"><img src="pics\wordpress logo.png" alt=""><span class="material-icons">east</span></div>
                 
-                <div class="brandsLogo"><img src="pics\shopify logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\wordpress logo.png" alt=""><span class="material-icons">east</span>
+                </div>
 
-                <div class="brandsLogo"><img src="pics\squarespace logo.png" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\shopify logo.svg" alt=""><span class="material-icons">east</span>
+                </div>
 
-                <div class="brandsLogo"><img src="pics\hubspot logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\squarespace logo.png" alt=""><span
+                        class="material-icons">east</span></div>
 
-                <div class="brandsLogo"><img src="pics\privy-light logo.png" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\hubspot logo.svg" alt=""><span class="material-icons">east</span>
+                </div>
 
-                <div class="brandsLogo"><img src="pics\webflow logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\privy-light logo.png" alt=""><span
+                        class="material-icons">east</span></div>
 
-                <div class="brandsLogo"><img src="pics\google-analytics-logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\webflow logo.svg" alt=""><span class="material-icons">east</span>
+                </div>
 
-                <div class="brandsLogo"><img src="pics\wix logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\google-analytics-logo.svg" alt=""><span
+                        class="material-icons">east</span></div>
 
-                <div class="brandsLogo"><img src="pics\carro-light logo.png" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\wix logo.svg" alt=""><span class="material-icons">east</span>
+                </div>
 
-                <div class="brandsLogo"><img src="pics\weebly-logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\carro-light logo.png" alt=""><span
+                        class="material-icons">east</span></div>
 
-                <div class="brandsLogo"><img src="pics\mailchimp-logo.svg" alt=""><span class="material-icons">east</span></div>
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\weebly-logo.svg" alt=""><span class="material-icons">east</span>
+                </div>
 
-                <div class="brandsLogo"><p>See All</p><span class="material-icons">east</span></div>
-                
+                <div data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" class="brandsLogo"> <img src="pics\mailchimp-logo.svg" alt=""><span class="material-icons">east</span></div>
+
+                <div class="brandsLogo" data-aos-easing="ease-out" data-aos="fade-up" data-aos-duration="1000" >
+                    <p>See All</p><span class="material-icons">east</span>
+                </div>
+
             </div>
         </section>
 
         <section class="sectionVII">
             <div>
-            <span> <h1>Your personal tech team.</h1> </span>
-            <span class="expertContact">Work with a Steamflex Expert<span class="material-icons">east</span></span>
+                <span>
+                    <h1 data-aos-easing="ease-in" data-aos="fade" data-aos-duration="700">Your personal tech team.</h1>
+                </span>
+                <span class="expertContact" data-aos-easing="ease-in" data-aos="fade" data-aos-duration="1000">Work with a Steamflex Expert<span class="material-icons">east</span></span>
             </div>
         </section>
 
@@ -641,7 +696,7 @@
     <footer>
 
         <div id="footer">
-            
+
 
             <div class="footerDiv">
                 <h3>COMPANY</h3>
@@ -650,7 +705,7 @@
                 <p>Partners</p>
                 <p>Careers</p>
             </div>
-    
+
             <div class="footerDiv">
                 <h3>PLATFORMS</h3>
                 <p>Wix</p>
@@ -658,7 +713,7 @@
                 <p>Squarespace</p>
                 <p>Shopify</p>
             </div>
-    
+
             <div class="footerDiv">
                 <h3>SERVICES</h3>
                 <p>Website Edification</p>
@@ -666,7 +721,7 @@
                 <p>Swift Fixes</p>
                 <p>Digital Marketing</p>
             </div>
-            
+
             <div class="footerDiv">
                 <h3>PRODUCT</h3>
                 <p>How It Works</p>
@@ -679,24 +734,29 @@
                 <h3>Contact Us</h3>
                 <p>support@steamflex.in</p>
                 <p>+2349030442453</p>
-    
+
             </div>
 
         </div>
 
 
         <div id="endNote">
-            <p>Made in Nigeria</p>
-            <p>SteamFlex Technologies, Inc.</p>
+            <p>Made in 9JA</p>
+            <p> &copy SteamFlex Technologies, Inc.</p>
             <p>Terms of Service</p>
             <p>Privacy Policy</p>
         </div>
 
     </footer>
 
+    
     <script src="app.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>        
+        AOS.init(); 
+    </script>
 </body>
+
 </html>

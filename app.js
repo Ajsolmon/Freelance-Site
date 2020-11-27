@@ -470,7 +470,7 @@ carouselControlCounter +=1
 
 
 
-
+//section 5 testimonial carousel.
 $(document).ready(() =>{
   $('#slideshower .slicker').slick({
       slidesToShow: 4,
@@ -507,3 +507,4 @@ $(document).ready(() =>{
       ]
   });
 });
+
