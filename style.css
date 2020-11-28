@@ -1060,6 +1060,48 @@ footer{
     padding: 3rem 1.1rem 0 1.1rem;
 }
 
+#endNote div:first-of-type{
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#fbIcon, #birdIcon, #inIcon{
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#fbIcon{
+    left: 50px;
+}
+
+#birdIcon{
+    left: 90px;
+}
+
+#inIcon{
+    left: 140px;
+}
+
+#endNote div:first-of-type img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+#endNote div:last-of-type {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#endNote div:last-of-type p{
+    font-size: 14px;
+}
+
 .footerDiv{
     line-height: 1.6rem;
 }
