@@ -1214,8 +1214,8 @@ label::after{
 }
 
 #headingI{
-    font-size: 1.6rem;
-    line-height: 1.3rem;
+    font-size: 1.6em;
+    line-height: 1.3em;
 }
 
 #headingII{
@@ -1728,37 +1728,35 @@ hr{
     .footerDiv h3{
         margin-bottom: 0.6rem;
     }
-
     
 #endNote div:first-of-type{
-    width: 120%;
-    display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 #fbIcon, #birdIcon, #inIcon{
     position: absolute;
-    font-size: 25px;
-    cursor: pointer;
+    top: -20px;
+    font-size: 20px;
+    color:rgb(0, 64, 255);
 }
 
 #fbIcon{
-    left: 50px;
+    left: -10px;
 }
 
 #birdIcon{
-    left: 90px;
+    left: 15px;
 }
 
 #inIcon{
-    left: 140px;
+    left: 50px;
 }
 
 #endNote div:first-of-type img{
     width: 30px;
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 #endNote div:last-of-type {
