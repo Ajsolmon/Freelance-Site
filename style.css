@@ -82,7 +82,7 @@ nav{
     position: relative;
     display: inline-block;
     cursor: pointer;
-    margin: 0 0.9rem;
+    margin: 0 14.4px;
     font-size: 0.95rem;
     font-weight: 800;
     padding-bottom: 4px;        /*to make some space for the overflow hidden and prevent the border div from being hidden*/
@@ -122,7 +122,7 @@ nav{
     width: 50%;
     min-height: 70%;
     max-height: 100vh;
-    padding: 2.5rem 1rem 1rem 1rem;
+    padding: 40px 16px 16px 16px;
     box-sizing: border-box;
     background-color: #c5e5f5;
     box-shadow: 0 0 5px #0a0808;
@@ -135,7 +135,7 @@ nav{
 
 #modal h1, #modal p{
     align-self: start;
-    margin: 0 0 1rem 10%;
+    margin: 0 0 16px 10%;
 }
 
 #socLogins{
@@ -160,32 +160,32 @@ nav{
     white-space: nowrap;
 }
 
-  #customBtn:hover {
-    cursor: pointer;
-  }
-  span.icon {
-    background: url('https://developers.google.com/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-    width: 42px;
-    height: 40px;
-  }
-  span.buttonText {
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    /* Use the Roboto font that is loaded in the <head> */
-    font-family: 'Roboto', sans-serif;
-  }
+#customBtn:hover {
+cursor: pointer;
+}
 
+span.icon {
+background: url('https://developers.google.com/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+display: inline-block;
+vertical-align: middle;
+width: 42px;
+height: 40px;
+}
+
+span.buttonText {
+display: inline-block;
+vertical-align: middle;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 1em;
+font-weight: bold;
+/* Use the Roboto font that is loaded in the <head> */
+font-family: 'Roboto', sans-serif;
+}
 
 #loginChoice{
     padding-top: 20px;
 }
-
 
 #modal p:nth-child(5){
     align-self: center;
@@ -212,7 +212,7 @@ nav{
 }
 
 #loginform label{
-    font-size: 13px;
+    font-size: 1.231em;
 }
 
 #closemodal{
@@ -220,7 +220,7 @@ nav{
     top: 10px;
     right: 10px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.25em;
     text-align: center;
     transition: 0.1s;
 }
@@ -263,13 +263,13 @@ nav{
 }
 
 #headingI{
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 1.3em;
 }
 
 #headingII{
     font-weight: 600;
-    margin: 2.2em 0 1.9em 0;
+    margin: 35px 0 30px 0;
     color: #000000cc;
 }
 
@@ -298,7 +298,7 @@ nav{
 
 #buttonI{
     font-weight: 600;
-    padding: 1em 2.3em;
+    padding: 16px 39px;
     background-color: #022235;
     color: white;
     text-shadow: 0 0 2px white;
@@ -364,10 +364,6 @@ nav{
     display: grid;
     grid-template-columns: 30% 30% 30%;
     justify-content: space-evenly;
-    /* margin-top: -150px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; */
 }
 
 .sec2icon1,.sec2icon2,.sec2icon3{
@@ -376,7 +372,7 @@ nav{
     margin: 0 auto;
     width: 50px;
     height: 50px;
-    font-size: 25px;
+    font-size: 1.5625em;
     background-color: #0e0d0d0d;
     margin-bottom: 20px;
 }
@@ -409,12 +405,12 @@ nav{
 }
 
 .sec2eldivs h2{
-    font-size: 20px;
+    font-size: 1.25em;
     margin-bottom: 50px;
 }
 
 .sec2eldivs p{
-    font-size: 19px;
+    font-size: 1.188em;
     color: #555d5e;
 }
 
@@ -425,7 +421,7 @@ nav{
 /* SECTION III */
 .sectionIII{
     width: 100%;
-    padding: 4em 0.3em;
+    padding: 64px 5px;
     background-color: #02051E;
     color: white;
     box-sizing: border-box;
@@ -433,7 +429,6 @@ nav{
 
 .sec3maindiv{
     text-align: center;
-    
 }
 
 .sec3heading{
@@ -452,7 +447,6 @@ nav{
     font-size: 1.125em;
     color: #ffffffa2;
 }
-
 
 .expertinfosection{
     height: 55vh;
@@ -502,7 +496,7 @@ nav{
 
 .expertname{
     margin: 30px 0;
-    font-size: 40px;
+    font-size: 2.5em;
     display: inline-block;
 }
 
@@ -532,7 +526,7 @@ nav{
 }
 
 .featuredexperts{
-    font-size: 21px;
+    font-size: 1.313em;
     margin-bottom: 20px;
 }
 
@@ -576,7 +570,7 @@ nav{
 }
 
 .sectionIV h1{
-    font-size: 40px;
+    font-size: 2.5em;
     margin-bottom: 80px;
 }
 
@@ -605,15 +599,14 @@ nav{
 
 .secivtextdiv p{
     justify-self: flex-start;
-    font-size: 18px;
+    font-size: 1.125em;
 }
-
 
 .VAS{
     position: absolute;
     left: 0;
     bottom: -15%;
-    font-size: 19px;
+    font-size: 1.188em;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -623,7 +616,7 @@ nav{
 }
 
 .VAS .material-icons{
-    font-size: 18px;
+    font-size: 1.125em;
     color: #ffffff2a;
     margin-left: 5px;
 }
@@ -901,7 +894,7 @@ hr{
     width: 200px;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: bold;
     position: relative;
     padding-bottom: 10px;
@@ -935,7 +928,7 @@ hr{
 .sectionVI h4{
     width: fit-content;
     margin: 20px auto;
-    font-size: 14px;
+    font-size: 0.875em;
     text-align: center;
 }
 
@@ -943,7 +936,7 @@ hr{
     width: 40vw;
     text-align: center;
     margin: 0 auto 70px auto;
-    font-size: 30px;
+    font-size: 1.875em;
 }
 
 .brandsSupported{
@@ -1002,13 +995,13 @@ hr{
 }
 
 .sectionVII h1{
-    font-size: 30px;
+    font-size: 1.875em;
     font-weight: bolder;
     margin-right: 20px;
 }
 
 .expertContact{
-    font-size: 15px;
+    font-size: 0.938em;
     color: white;
     padding: 15px 40px 15px 15px;
     background-color: #335C67;
@@ -1018,7 +1011,7 @@ hr{
 }
 
 .expertContact .material-icons{
-    font-size: 18px;
+    font-size: 1.125em;
     position: absolute;
     right: 18px;
     transition: all 0.2s;
@@ -1035,7 +1028,7 @@ hr{
 footer{
     width: 100%;
     height: 50vh;
-    padding: 2rem 1rem;
+    padding: 32px 15px;
     background-color: #02051E;
 }
 
@@ -1044,9 +1037,9 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     background-color: #03032e;
-    border-radius: 1.5rem 2px 1.5rem 2px;
+    border-radius: 24px 2px;
     box-shadow: 0 0 5px #104058;
-    padding: 1rem 1rem;
+    padding: 16px;
     text-align: left;
     color: white;
 
@@ -1057,7 +1050,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     color: white;
-    padding: 3rem 1.1rem 0 1.1rem;
+    padding: 48px 17.6px 0 17.6px;
 }
 
 #endNote div:first-of-type{
@@ -1099,7 +1092,7 @@ footer{
 }
 
 #endNote div:last-of-type p{
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 .footerDiv{
@@ -1107,7 +1100,7 @@ footer{
 }
 
 .footerDiv h3{
-    margin-bottom: 0.6rem;
+    margin-bottom: 10px;
 }
 
 
@@ -1121,15 +1114,15 @@ footer{
 nav{
     display: flex;
     flex-direction: column;
-    padding: .5rem 1rem;
+    padding: 8px 16px;
     position: static;
 }
 
 #mobileNav{
-    font-size: 25px;
-    line-height: 60px;
+    font-size: 1.5rem;
+    line-height: 3.7rem;
     margin-top: 10%;
-    margin-left: 1.5rem;
+    margin-left: 1.24px;
 }
 
 .topbarItems{
@@ -1211,6 +1204,8 @@ label::after{
 
 
 
+
+
     /* SECTION 1 */
 
 #sectionI{
@@ -1219,18 +1214,15 @@ label::after{
 }
 
 #headingI{
-    font-size: 25px;
-    line-height: 1.3em;
+    font-size: 1.6rem;
+    line-height: 1.3rem;
 }
 
 #headingII{
-    font-size: 16px;
-    margin: 2.2em 0 1.9em 0;
+    font-size: 1rem;
+    margin: 35px 0 30px 0;
     color: #000000cc;
-}
-    
-    
-    
+}    
     
     
 
@@ -1245,7 +1237,7 @@ label::after{
 
 .section2headtext{
     margin-top: 35px;
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 .section2maindiv{
@@ -1260,12 +1252,12 @@ label::after{
 }
 
 .sec2eldivs h2{
-    font-size: 19px;
+    font-size: 1.19rem;
     margin-bottom: 20px;
 }
 
 .sec2eldivs p{
-    font-size: 15px;
+    font-size: 0.95rem;
 }
 
 .ladysvg, .mansvg{
@@ -1278,7 +1270,7 @@ label::after{
 
 /* SECTION 3  */
 .sectionIII{
-    padding: 3.2em 1.25em;
+    padding: 50px 20px;
 }
 
 .sec3heading{
@@ -1286,19 +1278,18 @@ label::after{
 }
 
 .sec3heading h1{
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 40px;
 }
 
 .sec3heading h4{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .sec3heading p{
-    font-size: 0.875em;
+    font-size: 0.875rem;
     color: #ffffffa2;
 }
-
 
 .expertinfosection{
     height: auto;
@@ -1336,7 +1327,7 @@ label::after{
 }
 
 .expertinfosection p{
-    font-size: 0.9375em;
+    font-size: 0.9375rem;
 }
 
 .expertbio{
@@ -1345,7 +1336,7 @@ label::after{
 
 .expertname{
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .expertjob{
@@ -1355,7 +1346,7 @@ label::after{
 }
 
 .extraexpertdetails{
-    font-size: 1em;
+    font-size: 1rem;
     margin: 35px auto 0 auto;
 }
 
@@ -1398,7 +1389,7 @@ label::after{
 }
 
 .sectionIV h1{
-    font-size: 25px;
+    font-size: 1.56rem;
     margin-bottom: 40px;
 }
 
@@ -1618,13 +1609,13 @@ hr{
 
 .sectionVI h4{
     margin: 40px auto 15px auto;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .sectionVI h1{
     width: 100%;
     margin: 0 auto 80px auto;
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 .brandsSupported{
@@ -1668,13 +1659,13 @@ hr{
 }
 
 .sectionVII h1{
-    font-size: 25px;
+    font-size: 1.5625rem;
     margin-right: 0;
     margin-bottom: 20px;
 }
 
 .expertContact{
-    font-size: 15px;
+    font-size: 0.74rem;
     font-weight: 500;
     padding: 14px 35px 14px 17px;
     position: relative;
@@ -1684,10 +1675,6 @@ hr{
     position: absolute;
     right: 13px;
 }
-
-
-
-
 
 
 
@@ -1725,11 +1712,11 @@ hr{
 
     #endNote p:nth-of-type(2){
         font-size: 14.5px;
-        color: #000000b3;
+        color: #000000ea;
     }
 
     #endNote p{
-        font-size: 14px;
+        font-size: 14.5px;
         padding: 0.5rem;
         color: #000000ea;
     }
@@ -1741,5 +1728,46 @@ hr{
     .footerDiv h3{
         margin-bottom: 0.6rem;
     }
+
+    
+#endNote div:first-of-type{
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#fbIcon, #birdIcon, #inIcon{
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#fbIcon{
+    left: 50px;
+}
+
+#birdIcon{
+    left: 90px;
+}
+
+#inIcon{
+    left: 140px;
+}
+
+#endNote div:first-of-type img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+#endNote div:last-of-type {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 }
 

@@ -1,5 +1,5 @@
+//HEADER CHANGE BG ONSCROLL
 const header = document.querySelector('.header');
-const toggle  = document.querySelector('#hamburger')
 
 window.onscroll = function(){
     let scroll = window.scrollY
@@ -12,8 +12,10 @@ window.onscroll = function(){
 }
 
 
+
 //MOBILE NAV BAR
 let toggleCount = 0
+const toggle  = document.querySelector('#hamburger');
 
 toggle.addEventListener('click', function(){
     toggleCount++
@@ -48,7 +50,7 @@ var startApp = function() {
 };
 
 function attachSignin(element) {
-  console.log(element.id);
+  // console.log(element.id);
   auth2.attachClickHandler(element, {},
       function(googleUser) {
         document.getElementById('name').innerText = "Signed in: " +
@@ -58,6 +60,7 @@ function attachSignin(element) {
       });
 }
 startApp();
+
 
 
 // TO RENDER FB LOGIN BUTTON
@@ -90,7 +93,6 @@ const loginButton = document.getElementById('loginButton')
 
 let emailTrue = false;
 let passwordTrue = false;
-
 
 emailfield.addEventListener('input', function(e){
   const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
