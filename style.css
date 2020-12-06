@@ -1124,6 +1124,7 @@ nav{
 }
 
 #mobileNav{
+    overflow: scroll;
     font-size: 1.5rem;
     line-height: 3.7rem;
     margin-top: 10%;
