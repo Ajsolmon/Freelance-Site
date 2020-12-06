@@ -904,12 +904,12 @@ hr{
 .reviews .material-icons{
     font-size: 20px;
     position: absolute;
-    right: 0;
+    right: -5px;
+    transition: right 0.1s linear;
 }
 
 .reviews:hover .material-icons{
-    right: -5px;
-    transition: right 0.1s linear;
+    right: -10px;
 }
 
 
@@ -1051,6 +1051,11 @@ footer{
     justify-content: space-between;
     color: white;
     padding: 48px 17.6px 0 17.6px;
+}
+
+#endNote a{
+    text-decoration: none;
+    color: white;
 }
 
 #endNote div:first-of-type{
@@ -1684,7 +1689,7 @@ hr{
     footer{
         height: auto;
         padding: 2rem 2rem;
-        background-color: lavender;
+        background-color: #02051E;
         text-align: center;
         outline: 1px solid white;
     }
