@@ -10,6 +10,9 @@
     <title>SteamFlex</title>
 
     <link rel="stylesheet" href="style.css">
+    
+    <meta name="google-signin-client_id" content="335325138627-7r3tloqnen7dktbdk4bo366dgka207hi.apps.googleusercontent.com">
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
@@ -24,7 +27,7 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <script src="https://apis.google.com/js/api:client.js"></script>
+    
 </head>
 
 <body>
@@ -111,17 +114,11 @@
 
                 <div id="socLogins">
                     <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default"
-                        data-auto-logout-link="false" data-use-continue-as="false" data-width="250"></div>
-
-                    <div>
-                        <div id="gSignInWrapper">
-                            <div id="customBtn" class="customGPlusSignIn">
-                                <span class="icon"></span>
-                                <span class="buttonText">Log in with Google</span>
-                            </div>
-                        </div>
-                        <div id="name"></div>
+                        data-auto-logout-link="false" data-use-continue-as="false" data-width="250">
                     </div>
+
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
 
                 </div>
 
@@ -136,8 +133,7 @@
 
                     <input type="submit" value="Log In" disabled id="loginButton">
 
-                    <p>By logging in, you agree to our <span id="modalLinks">Terms & Conditions</span> and <span
-                            id="modalLinks">Privacy Policy</span></p>
+                    <p>By logging in, you agree to our <span id="modalLinks">Terms & Conditions</span> and <span id="modalLinks">Privacy Policy</span></p>
                 </form>
 
             </div>
@@ -771,7 +767,7 @@
 
     
     <script src="app.js"></script>
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script> AOS.init(); </script>

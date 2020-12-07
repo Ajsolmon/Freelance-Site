@@ -150,7 +150,7 @@ nav{
 
 
 /* GOOGLE LOGIN BUTTON */
-#customBtn {
+/* #customBtn {
     display: inline-block;
     background: #1877F2;
     color: white;
@@ -179,9 +179,10 @@ padding-left: 5px;
 padding-right: 5px;
 font-size: 1em;
 font-weight: bold;
-/* Use the Roboto font that is loaded in the <head> */
-font-family: 'Roboto', sans-serif;
-}
+} */
+
+
+
 
 #loginChoice{
     padding-top: 20px;
@@ -197,6 +198,12 @@ font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     text-align: left;
+    outline: 1px solid black;
+}
+
+#loginform p{
+    align-items: flex-start;
+    outline: 1px solid black;
 }
 
 #modalLinks{
@@ -220,13 +227,14 @@ font-family: 'Roboto', sans-serif;
     top: 10px;
     right: 10px;
     display: inline-block;
-    font-size: 1.25em;
+    font-size: 20px;
     text-align: center;
     transition: 0.1s;
+    cursor: pointer;
 }
 
 #closemodal:hover{
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 #loginButton{
