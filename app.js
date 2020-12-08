@@ -38,12 +38,9 @@ toggle.addEventListener('click', function(){
 var googleUser = {};
 var startApp = function() {
   gapi.load('auth2', function(){
-    // Retrieve the singleton for the GoogleAuth library and set up the client.
     auth2 = gapi.auth2.init({
       client_id: '335325138627-7r3tloqnen7dktbdk4bo366dgka207hi.apps.googleusercontent.com',
       cookiepolicy: 'single_host_origin',
-      // Request scopes in addition to 'profile' and 'email'
-      //scope: 'additional_scope'
     });
     attachSignin(document.getElementById('customBtn'));
   });
@@ -59,31 +56,8 @@ function attachSignin(element) {
         // alert(JSON.stringify(error, undefined, 2));
       });
 }
-
 startApp();
 
-
-
-// TO RENDER FB LOGIN BUTTON
-window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '{748538615707937}',
-    cookie     : true,
-    xfbml      : true,
-    version    : '{v8.0}'
-  });
-    
-  FB.AppEvents.logPageView();   
-    
-};
-
-(function(d, s, id){
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement(s); js.id = id;
-   js.src = "https://connect.facebook.net/en_US/sdk.js";
-   fjs.parentNode.insertBefore(js, fjs);
- }(document, 'script', 'facebook-jssdk'));
 
 
 
