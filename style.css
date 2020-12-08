@@ -150,36 +150,42 @@ nav{
 
 
 /* GOOGLE LOGIN BUTTON */
-/* #customBtn {
+#customBtn {
     display: inline-block;
-    background: #1877F2;
-    color: white;
-    width: 250px;
+    background: white;
+    color: #000;
+    width: 190px;
     border-radius: 5px;
-    box-shadow: 0 0 1px grey;
+    border: thin solid #888;
     white-space: nowrap;
-}
+  }
+  #customBtn:hover {
+    cursor: pointer;
+  }
+  span.label {
+    font-family: serif;
+    font-weight: normal;
+  }
+  span.icon {
+    background-image: url('https://i.ibb.co/NghY8Y0/512px-Google-G-Logo-svg.webp');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+  }
 
-#customBtn:hover {
-cursor: pointer;
-}
-
-span.icon {
-background: url('https://developers.google.com/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-display: inline-block;
-vertical-align: middle;
-width: 42px;
-height: 40px;
-}
-
-span.buttonText {
-display: inline-block;
-vertical-align: middle;
-padding-left: 5px;
-padding-right: 5px;
-font-size: 1em;
-font-weight: bold;
-} */
+  span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
 
 
 
@@ -188,22 +194,15 @@ font-weight: bold;
     padding-top: 20px;
 }
 
-#modal p:nth-child(5){
-    align-self: center;
-    margin-left: 0;
-}
-
 #loginform{
     width: 80%;
     display: flex;
     flex-direction: column;
     text-align: left;
-    outline: 1px solid black;
 }
 
 #loginform p{
-    align-items: flex-start;
-    outline: 1px solid black;
+    margin: 0;
 }
 
 #modalLinks{
@@ -219,7 +218,7 @@ font-weight: bold;
 }
 
 #loginform label{
-    font-size: 1.231em;
+    font-size: 1em;
 }
 
 #closemodal{

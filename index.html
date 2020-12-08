@@ -11,14 +11,13 @@
 
     <link rel="stylesheet" href="style.css">
     
-    <meta name="google-signin-client_id" content="335325138627-7r3tloqnen7dktbdk4bo366dgka207hi.apps.googleusercontent.com">
-
-
+    <script src="https://apis.google.com/js/api:client.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -32,8 +31,7 @@
 
 <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=748538615707937&autoLogAppEvents=1" nonce="IaWGEfVL"> </script>
-
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=748538615707937&autoLogAppEvents=1" nonce="KuabWuUv"></script>
 
 
     <header class="header">
@@ -113,12 +111,18 @@
                 </div>
 
                 <div id="socLogins">
-                    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default"
-                        data-auto-logout-link="false" data-use-continue-as="false" data-width="250">
+
+                    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+
+
+                    <div style="width: fit-content; border: 1px solid gray; border-radius: 5px;">
+                        <div id="gSignInWrapper">
+                            <div id="customBtn" class="customGPlusSignIn">
+                              <span class="icon"></span>
+                              <span class="buttonText"> Log in with Google</span>
+                            </div>
+                          </div>
                     </div>
-
-                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
 
                 </div>
 
@@ -767,7 +771,6 @@
 
     
     <script src="app.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script> AOS.init(); </script>
