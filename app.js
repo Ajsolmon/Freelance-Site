@@ -61,6 +61,35 @@ startApp();
 
 
 
+// TO RENDER FB LOGIN BUTTON
+
+function getUserData() {
+	FB.api('/me', {fields: 'name,email'}, (response) => {
+		document.getElementById('response').innerHTML = 'Hello ' + response.name;
+	});
+}
+
+FB.init({
+  appId  : 748538615707937,
+  cookie : true, // enable cookies to allow the server to access the session
+  xfbml  : true,  // parse XFBML
+  version    : 'v9.0'
+  });
+  
+  document.getElementById('loginBtn').addEventListener('click', function() {
+      //do the login
+      FB.login(function(response) {
+          if (response.authResponse) {
+              //user just authorized your app
+              getUserData();
+          }
+      }, {scope: 'email,public_profile', return_scopes: true});
+  }, false);
+  
+
+
+
+
 //TO VALIDATE LOGIN FORM
 const emailfield = document.getElementById('emailInput')
 const password = document.getElementById('password')

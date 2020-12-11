@@ -31,7 +31,7 @@
 
 <body>
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=748538615707937&autoLogAppEvents=1" nonce="KuabWuUv"></script>
+    <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=748538615707937&autoLogAppEvents=1" nonce="KuabWuUv"></script>
 
 
     <header class="header">
@@ -112,17 +112,18 @@
 
                 <div id="socLogins">
 
-                    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
-
-
-                    <div style="width: fit-content; border: 1px solid gray; border-radius: 5px;">
-                        <div id="gSignInWrapper">
-                            <div id="customBtn" class="customGPlusSignIn">
-                              <span class="icon"></span>
-                              <span class="buttonText"> Log in with Google</span>
-                            </div>
-                          </div>
+                    <div id="gSignInWrapper">
+                        <div id="customBtn" class="customGPlusSignIn">
+                            <span class="icon"></span>
+                            <span class="buttonText"> Log in with Google</span>
+                        </div>
                     </div>
+
+                    
+                    <button id="loginBtn">
+                        <span class='fbIcon'></span> 
+                        <span class='btnText'>Log in with Facebook</span> 
+                    </button>
 
                 </div>
 
