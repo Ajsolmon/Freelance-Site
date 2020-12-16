@@ -116,22 +116,21 @@ nav{
     background-color: #82d5ff99;
     display: none;
     place-items: center;
-    position: relative;
 }
 
-#modal{
+.modal{
     min-width: 50vw;
     min-height: 70%;
-    max-height: 100vh;
     padding: 40px 16px 16px 16px;
     background-color: #c5e5f5;
     box-shadow: 0 0 5px #0a0808;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-#modal h1, #modal p{
+.modal h1, .modal p{
     align-self: start;
     margin: 0 0 16px 10%;
 }
@@ -289,7 +288,7 @@ nav{
 
 #sectionI{
     width: 100%;
-    height: 100vh;
+    height: 125vh;
     background-color: #0572aa;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%231885bc' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23009bba' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%233caeb0' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%2373bea5' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23a4cba1' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23d2d6a8' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
@@ -306,11 +305,12 @@ nav{
 #headingI{
     font-size: 2.5em;
     line-height: 1.3em;
+    margin-top: -280px;
 }
 
 #headingII{
     font-weight: 600;
-    margin: 35px 0 30px 0;
+    margin: 45px 0 60px 0;
     color: #000000cc;
 }
 
@@ -349,6 +349,7 @@ nav{
     border-radius: 4px;
     box-shadow: 0 0 4px 2px #0000004d;
     transition: 1s;
+    cursor: pointer;
 }
 
 #buttonI:hover{
@@ -366,19 +367,31 @@ nav{
     position: absolute;
     width: 300px;
     height: 300px;
+    bottom: 16%;
 }
 
 .ladysvg{
-    left: 10%;
-    bottom: 2%;
+    left: 15%;
 }
 
 .mansvg{
-    right: 10%;
-    bottom: 2%;
+    right: 15%;
 }
 
+.brandLogoWrap{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 13% 4% 9% 15%;
+    grid-column-gap: 50px;
+}
 
+.brandLogoWrap img{
+    width: inherit;
+}
 
 
 
@@ -505,23 +518,18 @@ nav{
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 85%;
+    height: 420px;
+    width: 400px;
     background-color: #ffffff3f;
     border-radius: 3%;
 }
 
-.expertinfosection p{
-    font-size: 1.1875em;
-    color: #ffffffa2;
-}
-
 .expertimg{
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 20px;
-    height: 100%;
-    width: 85%;
+    height: 420px;
+    width: 400px;
     border-radius: 3%;
     transition: linear 0.5s;
 }
@@ -529,6 +537,11 @@ nav{
 .expertimg:hover{
     top: 0;
     left: 0;
+}
+
+.expertinfosection p{
+    font-size: 1.1875em;
+    color: #ffffffa2;
 }
 
 .expertbio{
@@ -1154,9 +1167,38 @@ footer{
 
 
 
+
 /* MOBILE VERSION */
 
 @media (max-width:600px){    
+
+
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+ 
+/* ::-webkit-scrollbar-track {
+    background: #0572AA;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    height: 20px;
+    background: #d0eefd;
+    -webkit-box-shadow: inset 0 5px 8px white; 
+} */
+
+
+
+
+
+    
 nav{
     display: flex;
     flex-direction: column;
@@ -1202,7 +1244,7 @@ nav{
     visibility: hidden;
 }
 
-label,label::before,label::after{
+#controlIcons label,#controlIcons label::before,#controlIcons label::after{
     position: absolute;
     width: 30px;
     height: 2px;
@@ -1212,7 +1254,7 @@ label,label::before,label::after{
     -webkit-transition: 0.6s;
 }
 
-label{
+#controlIcons label{
     cursor: pointer;
     width: 35px;
     height: 3px;
@@ -1221,13 +1263,13 @@ label{
     transform: translateY(-50%);
 }
 
-label::before{
+#controlIcons label::before{
     content: '';
     transform: translateY(-8px);
     -webkit-transform: translateY(-8px);
 }
 
-label::after{
+#controlIcons label::after{
     content: '';
     transform: translateY(8px);
     -webkit-transform: translateY(8px);
@@ -1257,20 +1299,211 @@ label::after{
 #sectionI{
     padding: 0 5px;
     background-size: 100vw 100vh;
+    height: 100vh;
 }
 
 #headingI{
     font-size: 1.6em;
     line-height: 1.3em;
+    margin-top: 0;
 }
 
 #headingII{
-    font-size: 1rem;
+    font-size: 0.8em;
     margin: 35px 0 30px 0;
     color: #000000cc;
-}    
+}   
+
+.ladysvg, .mansvg{
+    display: none;
+}
+
+.brandLogoWrap{
+    bottom: 3%;
+    grid-template-columns: auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+}
+.brandLogoWrap img:nth-of-type(1){
+    width: 130px;
+}
+.brandLogoWrap img:nth-of-type(2){
+    width: 50px;
+}
+.brandLogoWrap img:nth-of-type(3){
+    width: 100px;
+}
+.brandLogoWrap img:nth-of-type(4){
+    width: 130px;
+}
+
+
+
+
+
+/* SIGN IN MODAL */
+#loginModal{
+    display:grid;
+    overflow-y: scroll;
+    max-height: 100%;
+}
+
+.modal{
+    top: 10px;
+    max-width: 95%;
+    padding: 30px 15px 15px 15px;
+}
+
+.modal h1, .modal p{
+    align-self: start;
+    margin: 0 0 16px 0;
+}
+
+.modal h1{
+    font-size: 28px;
+}.modal p{
+    font-size: 15px;
+}
+
+#closemodal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#closemodal:hover{
+    transform: rotate(90deg);
+}
+
+#socLogins{
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* GOOGLE LOGIN BUTTON */
+#gSignInWrapper {
+    width: 100%;
+    height: 52px;
+    background: white;
+    border: thin solid #c2c1c1;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+span.label {
+font-family: serif;
+font-weight: normal;
+}
+
+span.icon {
+background-image: url('https://i.ibb.co/NghY8Y0/512px-Google-G-Logo-svg.webp');
+background-repeat: no-repeat;
+background-size: 50%;
+background-position: center;
+width: 42px;
+height: 42px;
+margin-left: 15px;
+}
+
+span.buttonText {
+padding-left: 15px;
+padding-right: 42px;
+font-size: 14px;
+font-weight: bold;
+}
+
+
+  /* FB LOGIN */
+#loginBtn{
+width: 100%;
+height: 52px;
+margin-top: 10px;
+border-radius: 5px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+span.fbIcon{
+    background-image: url('https://i.ibb.co/t3zwF7M/facebook-logo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+}
+
+span.btnText{
+display: block;
+font-size: 14px;
+font-weight: bold;
+padding-left: 30px;
+padding-right: 42px;
+}
+  
+
+
+#loginChoice{
+    align-self: center;
+    width: 80%;
+    text-align: center;
+}
+
+#loginform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: normaL;
+}
+
+#loginform input{
+    padding: 20px 10px;
+    border-radius: 3px;
+    border: none;
+    margin: 5px 0 15px 0;
+}
+
+#loginform label{
+    width: 100%;
+    text-align: left;
+}
+
+#loginButton{
+    background-color: #fcae1f;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+#loginButton:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
     
-    
+#loginform p{
+    margin: 0;
+    font-size: 14px;
+}
+
+#modalLinks{
+    color:#1877F2;
+    cursor: pointer;
+}
 
 
     
@@ -1304,10 +1537,6 @@ label::after{
 
 .sec2eldivs p{
     font-size: 0.95rem;
-}
-
-.ladysvg, .mansvg{
-    display: none;
 }
 
 
@@ -1815,3 +2044,150 @@ hr{
 
 }
 
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+    
+/* nav{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    position: static;
+}
+
+#mobileNav{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-top: 10%;
+    margin-left: 1.24px;
+}
+
+.topbarItems{
+    display: none;
+}
+
+#iconLogoDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topLogo{
+    position: static;
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}  
+
+#controlIcons{
+    display: block;
+    position: relative;
+} */
+
+
+    /* ANIMATED MENU HAMBURGER */
+/* #hamburger{
+    visibility: hidden;
+    border: thin solid yellow;
+}
+
+label,label::before,label::after{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #000000;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+}
+
+label{
+    cursor: pointer;
+    width: 35px;
+    height: 3px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+label::before{
+    content: '';
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+}
+
+label::after{
+    content: '';
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+}
+
+#hamburger:checked + label{
+    height: 0;
+    transform: translateX(0px);
+}
+
+#hamburger:checked + label::before{
+    transform: rotate(45deg) translate(0px);
+    -webkit-transform: rotate(45deg) translate(0px);
+}
+
+#hamburger:checked + label::after{
+    transform: rotate(-45deg) translate(0px);
+    -webkit-transform: rotate(-45deg) translate(0px);
+} */
+
+
+
+
+
+
+/* SECTION 1 */
+
+/* #sectionI{
+    padding: 0 5px;
+    background-size: 100vw 100vh;
+}
+
+#headingI{
+    font-size: 2em;
+    line-height: 1.3em;
+}
+
+#headingII{
+    font-size: 1rem;
+    margin: 35px 0 30px 0;
+    color: #000000cc;
+}
+
+.ladysvg{
+    display: none;
+}
+
+.mansvg{
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 15%;
+}
+
+.brandLogoWrap{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 17% 7% 15% 20%;
+    grid-column-gap: 50px;
+}
+
+.brandLogoWrap img{
+    width: inherit;
+}
+ */
+
+
+
+}
