@@ -2051,13 +2051,13 @@ hr{
 
 .modal h1, .modal p{
     align-self: start;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .modal h1{
-    font-size: 25px;
+    font-size: 20px;
 }.modal p{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #closemodal{
