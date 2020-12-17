@@ -1334,7 +1334,7 @@ nav{
 
 /* SIGN IN MODAL */
 #loginModal{
-    display:grid;
+    display:none;
 }
 
 .modal{
@@ -2040,7 +2040,7 @@ hr{
 
 /* SIGN IN MODAL */
 #loginModal{
-    display:grid;
+    display: none;
 }
 
 .modal{
