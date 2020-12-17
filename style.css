@@ -120,7 +120,7 @@ nav{
 
 .modal{
     min-width: 50vw;
-    min-height: 70%;
+    height: 80%;
     padding: 40px 16px 16px 16px;
     background-color: #c5e5f5;
     box-shadow: 0 0 5px #0a0808;
@@ -971,6 +971,10 @@ hr{
 
 
 
+
+
+
+
 /* SECTION VI */
 .sectionVI{
     width: 100%;
@@ -1032,6 +1036,12 @@ hr{
 
 
 
+
+
+
+
+
+
 /* sectionVII */
 
 .sectionVII{
@@ -1074,6 +1084,11 @@ hr{
 .expertContact:hover .material-icons{
     right: 13px;
 }
+
+
+
+
+
 
 
 
@@ -1168,36 +1183,12 @@ footer{
 
 
 
+
+
+
 /* MOBILE VERSION */
 
 @media (max-width:600px){    
-
-
-
-
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar {
-    width: 0;
-}
- 
-/* ::-webkit-scrollbar-track {
-    background: #0572AA;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-}
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    height: 20px;
-    background: #d0eefd;
-    -webkit-box-shadow: inset 0 5px 8px white; 
-} */
-
-
-
-
-
     
 nav{
     display: flex;
@@ -1344,13 +1335,11 @@ nav{
 /* SIGN IN MODAL */
 #loginModal{
     display:grid;
-    overflow-y: scroll;
-    max-height: 100%;
 }
 
 .modal{
-    top: 10px;
-    max-width: 95%;
+    height: auto;
+    max-width: 90%;
     padding: 30px 15px 15px 15px;
 }
 
@@ -2044,6 +2033,130 @@ hr{
 
 }
 
+
+
+@media (max-height: 640px){
+    
+
+/* SIGN IN MODAL */
+#loginModal{
+    display:grid;
+}
+
+.modal{
+    max-height: 95%;
+    max-width: 90%;
+    padding: 20px 15px 15px 15px;
+}
+
+.modal h1, .modal p{
+    align-self: start;
+    margin-bottom: 10px;
+}
+
+.modal h1{
+    font-size: 25px;
+}.modal p{
+    font-size: 15px;
+}
+
+#closemodal{
+    top: 5px;
+    right: 5px;
+}
+
+#socLogins{
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* GOOGLE LOGIN BUTTON */
+#gSignInWrapper {
+    width: 100%;
+    height: 47px;
+    outline: none;
+    border-radius: 5px;
+    flex-direction: row;
+    align-items: center;
+}
+
+span.label {
+font-family: serif;
+font-weight: normal;
+}
+
+span.icon {
+margin-left: 15px;
+}
+
+span.buttonText {
+padding-left: 15px;
+padding-right: 42px;
+font-size: 14px;
+font-weight: bold;
+}
+
+
+  /* FB LOGIN */
+#loginBtn{
+width: 100%;
+height: 47px;
+margin-top: 10px;
+border-radius: 5px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+span.fbIcon{
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+}
+
+span.btnText{
+display: block;
+font-size: 14px;
+font-weight: bold;
+padding-left: 30px;
+padding-right: 42px;
+}  
+
+
+#loginChoice{
+    align-self: center;
+    width: 80%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#loginform{
+    width: 100%;
+    text-align: left;
+    align-self: normaL;
+}
+
+#loginform input{
+    padding: 17px 10px;
+    border-radius: 3px;
+    border: none;
+    margin: 5px 0 10px 0;
+}
+
+#loginButton{
+    font-size: 16px;
+}
+    
+#loginform p{
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+}
 
 @media screen and (min-width: 768px) and (max-width:1024px){
     
