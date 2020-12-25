@@ -119,7 +119,7 @@ nav{
 }
 
 .modal{
-    min-width: 50vw;
+    min-width: 60vw;
     height: 80%;
     padding: 40px 16px 16px 16px;
     background-color: #c5e5f5;
@@ -293,6 +293,7 @@ nav{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%231885bc' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23009bba' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%233caeb0' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%2373bea5' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23a4cba1' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23d2d6a8' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -508,8 +509,29 @@ nav{
     display: grid;
     grid-template-columns: 400px 40vw;
     justify-content: center;
+    grid-column-gap: 40px;
+    margin-bottom: 60px;
+}
+
+.expertinfosection.transition{
+    height: 60vh;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 400px 40vw;
+    justify-content: center;
     grid-column-gap: 20px;
     margin-bottom: 60px;
+    animation: fade 0.5s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
 }
 
 .expertAppearance{
@@ -520,8 +542,8 @@ nav{
     position: absolute;
     top: 0;
     left: 0;
-    width: 370px;
-    height: 390px;
+    width: 390px;
+    height: 410px;
     background-color: #ffffff3f;
     border-radius: 7px;
 }
@@ -530,20 +552,15 @@ nav{
     position: absolute;
     top: 20px;
     left: 20px;
-    height: 390px;
-    width: 370px;
+    width: 390px;
+    height: 410px;
     border-radius: 10px;
-    transition: linear 0.5s;
+    transition: all 0.3s;
 }
 
 .expertimg:hover{
     top: 0;
     left: 0;
-}
-
-.expertinfosection p{
-    font-size: 1.1875em;
-    color: #ffffffa2;
 }
 
 .expertbio{
@@ -560,6 +577,11 @@ nav{
 .expertjob{
     display: inline-block;
     padding-left: 30px;
+}
+
+.expertinfosection p{
+    font-size: 1.1875em;
+    color: #ffffffa2;
 }
 
 .extraexpertdetails{
@@ -753,15 +775,42 @@ nav{
     border-radius: 10px;
 }
 
-#idred{background: #B1B0B7;}
+#idred{
+    background-image: url('Rebecca.jpg'), linear-gradient(to right, #D3C9C7, #CBC3C1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
-#idyellow{background: #B1B0B7;}
+#idyellow{
+    background-image: url('Sean.jpg'), linear-gradient(to right, #AAAEB1, #BBBFC2);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
-#idgreen{background: #B1B0B7;}
+#idgreen{
+    background-color: #B9B8BF;
+    background-image: url('Janet.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 5%;
+}
 
-#idblack{background: #B1B0B7;}
+#idblack{
+    background-image: url('Sen.jpg'), linear-gradient(to right, #C1BBC5, #B2A7B5);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
-#idpurple{background: #B1B0B7;}
+#idpurple{
+    background-color: #ADADB4;
+    background-image: url('Seth.png');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: 10%;
+}
 
 .sliderName{
     position: absolute;
@@ -1007,21 +1056,19 @@ hr{
 }
 
 .brandsSupported{
-    margin: 0 auto;
-    width: fit-content;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-around;
-    grid-gap: 20px;
+    width: 100%;
     margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 213px);
+    grid-template-rows: repeat(3, 115px);
+    justify-content: center;
+    grid-gap: 20px;
     position: relative;
 }
 
 .brandsLogo{
     display: grid;
     place-items: center;
-    width: 215px;
-    height: 115px;
     background-color: #ffffff1c;
     border-radius: 3px;
     font-weight: bold;
@@ -1058,7 +1105,7 @@ hr{
     justify-content: center;
     padding: 50px 0;
     background-color: #ff4400;
-    border-bottom: 1px solid #0000004d;
+    border-bottom: 1px solid wheat;
 }
 
 .sectionVII div{
@@ -1116,7 +1163,7 @@ footer{
     justify-content: space-between;
     background-color: #03032e;
     border-radius: 24px 2px;
-    box-shadow: 0 0 5px #104058;
+    box-shadow: 0 0 5px #ff4400;
     padding: 16px;
     text-align: left;
     color: white;
@@ -1183,7 +1230,21 @@ footer{
 }
 
 .footerDiv h3{
+    color: #ff4400;
     margin-bottom: 10px;
+}
+
+.footerDiv p{
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 0 solid white;
+    transition: all 0.1s;
+    width: fit-content;
+}
+
+.footerDiv p:hover{
+    border-bottom: 2px solid white;
 }
 
 
@@ -1321,6 +1382,7 @@ nav{
 .brandLogoWrap{
     bottom: 3%;
     grid-template-columns: auto auto;
+    justify-items: center;
     grid-column-gap: 50px;
     grid-row-gap: 10px;
 }
@@ -1767,11 +1829,11 @@ padding-right: 42px;
 }
 
 .sliderName h1{
-    font-size: 25px;
+    font-size: 21px;
 }
 
 .sliderName h3{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .sliderName hr{
@@ -1896,6 +1958,7 @@ hr{
     width: 100%;
     display: grid;
     grid-template-columns: auto;
+    grid-template-rows: auto;
     justify-content: start;
     row-gap: 20px;
     margin-bottom: 50px;
@@ -1966,7 +2029,6 @@ hr{
         flex-direction: column;
         align-items: center;
         background-color: #03032e;
-        text-align: center;
     }
     
     #endNote{
@@ -1995,11 +2057,18 @@ hr{
     }
 
     .footerDiv{
-        margin-bottom: 40px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
     }
 
     .footerDiv h3{
         margin-bottom: 0.6rem;
+    }
+
+    .footerDiv p{
+        width: 100%;
+        border: none;
     }
     
 #endNote div:first-of-type{
@@ -2010,17 +2079,17 @@ hr{
 
 #fbIcon, #birdIcon, #inIcon{
     position: absolute;
-    top: -20px;
+    top: -30px;
     font-size: 20px;
     color:rgb(0, 64, 255);
 }
 
 #fbIcon{
-    left: -10px;
+    left: -20px;
 }
 
 #birdIcon{
-    left: 15px;
+    left: 10px;
 }
 
 #inIcon{
@@ -2169,7 +2238,7 @@ padding-right: 42px;
 
 @media screen and (min-width: 768px) and (max-width:1024px){
     
-/* nav{
+nav{
     display: flex;
     flex-direction: column;
     padding: 8px 16px;
@@ -2206,11 +2275,11 @@ padding-right: 42px;
 #controlIcons{
     display: block;
     position: relative;
-} */
+}
 
 
     /* ANIMATED MENU HAMBURGER */
-/* #hamburger{
+#hamburger{
     visibility: hidden;
     border: thin solid yellow;
 }
@@ -2259,7 +2328,7 @@ label::after{
 #hamburger:checked + label::after{
     transform: rotate(-45deg) translate(0px);
     -webkit-transform: rotate(-45deg) translate(0px);
-} */
+}
 
 
 
@@ -2268,7 +2337,7 @@ label::after{
 
 /* SECTION 1 */
 
-/* #sectionI{
+#sectionI{
     padding: 0 5px;
     background-size: 100vw 100vh;
 }
@@ -2308,7 +2377,7 @@ label::after{
 .brandLogoWrap img{
     width: inherit;
 }
- */
+
 
 
 

@@ -187,47 +187,71 @@ const expertdetails = [
   }
 ]
 
-var bioLink = document.getElementsByClassName('expertbiolink')
+
+
+let bioLink       = document.getElementsByClassName('expertbiolink')
+let expertName    = document.querySelector('.expertname')
+let expertImage   = document.querySelector('.expertimg')
+let expertJob     = document.querySelector('.expertjob')
+let expertExp     = document.querySelector('.expertexp')
+let expertInfoSxn     = document.querySelector('.expertinfosection')
+bioLink[0].style.opacity = 1
 
 bioLink[0].addEventListener('click', function(){  
-  document.querySelector('.expertname').innerHTML = expertdetails[0].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[0].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[0].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[0].expertimage
+  expertInfoSxn.classList.add('transition')
 
-  bioLink[0].style.opacity = 1
-  bioLink[1].style.opacity = 0.5
-  bioLink[2].style.opacity = 0.5
-  bioLink[3].style.opacity = 0.5
-  bioLink[4].style.opacity = 0.5
-  bioLink[5].style.opacity = 0.5
-  bioLink[6].style.opacity = 0.5
-  bioLink[7].style.opacity = 0.5
+  setTimeout(() => {
+    expertImage.src = expertdetails[0].expertimage
+    expertName.innerHTML = expertdetails[0].expertname
+    expertJob.innerHTML = expertdetails[0].expertjob
+    expertExp.innerHTML = expertdetails[0].expertdetails
+  
+    bioLink[0].style.opacity = 1
+    bioLink[1].style.opacity = 0.5
+    bioLink[2].style.opacity = 0.5
+    bioLink[3].style.opacity = 0.5
+    bioLink[4].style.opacity = 0.5
+    bioLink[5].style.opacity = 0.5
+    bioLink[6].style.opacity = 0.5
+    bioLink[7].style.opacity = 0.5
+  
+    expertInfoSxn.classList.remove('transition')    
+  }, 300);
 
 
 })
 
 bioLink[1].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[1].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[1].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[1].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[1].expertimage
+  expertInfoSxn.classList.add('transition')
 
-  bioLink[0].style.opacity = 0.5
-  bioLink[1].style.opacity = 1
-  bioLink[2].style.opacity = 0.5
-  bioLink[3].style.opacity = 0.5
-  bioLink[4].style.opacity = 0.5
-  bioLink[5].style.opacity = 0.5
-  bioLink[6].style.opacity = 0.5
-  bioLink[7].style.opacity = 0.5
+  setTimeout(() => {
+    expertImage.src = expertdetails[1].expertimage
+    expertName.innerHTML = expertdetails[1].expertname
+    expertJob.innerHTML = expertdetails[1].expertjob
+    expertExp.innerHTML = expertdetails[1].expertdetails
+  
+    bioLink[0].style.opacity = 0.5
+    bioLink[1].style.opacity = 1
+    bioLink[2].style.opacity = 0.5
+    bioLink[3].style.opacity = 0.5
+    bioLink[4].style.opacity = 0.5
+    bioLink[5].style.opacity = 0.5
+    bioLink[6].style.opacity = 0.5
+    bioLink[7].style.opacity = 0.5
+    
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
+
 })
 
 bioLink[2].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[2].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[2].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[2].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[2].expertimage
+  expertInfoSxn.classList.add('transition')
+
+  setTimeout(() => {
+    expertImage.src = expertdetails[2].expertimage
+  expertName.innerHTML = expertdetails[2].expertname
+  expertJob.innerHTML = expertdetails[2].expertjob
+  expertExp.innerHTML = expertdetails[2].expertdetails
 
   bioLink[0].style.opacity = 0.5
   bioLink[1].style.opacity = 0.5
@@ -237,29 +261,42 @@ bioLink[2].addEventListener('click', function(){
   bioLink[5].style.opacity = 0.5
   bioLink[6].style.opacity = 0.5
   bioLink[7].style.opacity = 0.5
+  
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
 })
 
 bioLink[3].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[3].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[3].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[3].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[3].expertimage
+  expertInfoSxn.classList.add('transition')
 
-  bioLink[0].style.opacity = 0.5
-  bioLink[1].style.opacity = 0.5
-  bioLink[2].style.opacity = 0.5
-  bioLink[3].style.opacity = 1
-  bioLink[4].style.opacity = 0.5
-  bioLink[5].style.opacity = 0.5
-  bioLink[6].style.opacity = 0.5
-  bioLink[7].style.opacity = 0.5
+  setTimeout(() => {
+    expertImage.src = expertdetails[3].expertimage
+    expertName.innerHTML = expertdetails[3].expertname
+    expertJob.innerHTML = expertdetails[3].expertjob
+    expertExp.innerHTML = expertdetails[3].expertdetails
+
+    bioLink[0].style.opacity = 0.5
+    bioLink[1].style.opacity = 0.5
+    bioLink[2].style.opacity = 0.5
+    bioLink[3].style.opacity = 1
+    bioLink[4].style.opacity = 0.5
+    bioLink[5].style.opacity = 0.5
+    bioLink[6].style.opacity = 0.5
+    bioLink[7].style.opacity = 0.5
+    
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
+
 })
 
 bioLink[4].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[4].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[4].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[4].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[4].expertimage
+  expertInfoSxn.classList.add('transition')
+
+  setTimeout(() => {
+    expertImage.src = expertdetails[4].expertimage
+  expertName.innerHTML = expertdetails[4].expertname
+  expertJob.innerHTML = expertdetails[4].expertjob
+  expertExp.innerHTML = expertdetails[4].expertdetails
 
   bioLink[0].style.opacity = 0.5
   bioLink[1].style.opacity = 0.5
@@ -269,13 +306,19 @@ bioLink[4].addEventListener('click', function(){
   bioLink[5].style.opacity = 0.5
   bioLink[6].style.opacity = 0.5
   bioLink[7].style.opacity = 0.5
+  
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
 })
 
 bioLink[5].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[5].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[5].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[5].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[5].expertimage
+  expertInfoSxn.classList.add('transition')
+
+  setTimeout(() => {
+    expertImage.src = expertdetails[5].expertimage
+  expertName.innerHTML = expertdetails[5].expertname
+  expertJob.innerHTML = expertdetails[5].expertjob
+  expertExp.innerHTML = expertdetails[5].expertdetails
 
   bioLink[0].style.opacity = 0.5
   bioLink[1].style.opacity = 0.5
@@ -285,38 +328,55 @@ bioLink[5].addEventListener('click', function(){
   bioLink[5].style.opacity = 1
   bioLink[6].style.opacity = 0.5
   bioLink[7].style.opacity = 0.5
+  
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
+
 })
 
 bioLink[6].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[6].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[6].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[6].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[6].expertimage
+  expertInfoSxn.classList.add('transition')
 
-  bioLink[0].style.opacity = 0.5
-  bioLink[1].style.opacity = 0.5
-  bioLink[2].style.opacity = 0.5
-  bioLink[3].style.opacity = 0.5
-  bioLink[4].style.opacity = 0.5
-  bioLink[5].style.opacity = 0.5
-  bioLink[6].style.opacity = 1
-  bioLink[7].style.opacity = 0.5
+  setTimeout(() => {
+    expertImage.src = expertdetails[6].expertimage
+    expertName.innerHTML = expertdetails[6].expertname
+    expertJob.innerHTML = expertdetails[6].expertjob
+    expertExp.innerHTML = expertdetails[6].expertdetails
+
+    bioLink[0].style.opacity = 0.5
+    bioLink[1].style.opacity = 0.5
+    bioLink[2].style.opacity = 0.5
+    bioLink[3].style.opacity = 0.5
+    bioLink[4].style.opacity = 0.5
+    bioLink[5].style.opacity = 0.5
+    bioLink[6].style.opacity = 1
+    bioLink[7].style.opacity = 0.5
+    
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
+
 })
 
 bioLink[7].addEventListener('click', function(){
-  document.querySelector('.expertname').innerHTML = expertdetails[7].expertname
-  document.querySelector('.expertjob').innerHTML = expertdetails[7].expertjob
-  document.querySelector('.expertexp').innerHTML = expertdetails[7].expertdetails
-  document.querySelector('.expertimg').src = expertdetails[7].expertimage
+  expertInfoSxn.classList.add('transition')
+  setTimeout(() => {
+    expertImage.src = expertdetails[7].expertimage
+    expertName.innerHTML = expertdetails[7].expertname
+    expertJob.innerHTML = expertdetails[7].expertjob
+    expertExp.innerHTML = expertdetails[7].expertdetails
 
-  bioLink[0].style.opacity = 0.5
-  bioLink[1].style.opacity = 0.5
-  bioLink[2].style.opacity = 0.5
-  bioLink[3].style.opacity = 0.5
-  bioLink[4].style.opacity = 0.5
-  bioLink[5].style.opacity = 0.5
-  bioLink[6].style.opacity = 0.5
-  bioLink[7].style.opacity = 1
+    bioLink[0].style.opacity = 0.5
+    bioLink[1].style.opacity = 0.5
+    bioLink[2].style.opacity = 0.5
+    bioLink[3].style.opacity = 0.5
+    bioLink[4].style.opacity = 0.5
+    bioLink[5].style.opacity = 0.5
+    bioLink[6].style.opacity = 0.5
+    bioLink[7].style.opacity = 1
+    
+    expertInfoSxn.classList.remove('transition')       
+  }, 300);
+
 })
 
 
