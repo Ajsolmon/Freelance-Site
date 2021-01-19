@@ -34,104 +34,6 @@ toggle.addEventListener('click', function(){
 
 
 
-// TO RENDER THE GOOGLE LOGIN BUTTON
-var googleUser = {};
-var startApp = function() {
-  gapi.load('auth2', function(){
-    auth2 = gapi.auth2.init({
-      client_id: '335325138627-7r3tloqnen7dktbdk4bo366dgka207hi.apps.googleusercontent.com',
-      cookiepolicy: 'single_host_origin',
-    });
-    attachSignin(document.getElementById('customBtn'));
-  });
-};
-
-function attachSignin(element) {
-  // console.log(element.id);
-  auth2.attachClickHandler(element, {},
-      function(googleUser) {
-        // document.getElementById('name').innerText = "Signed in: " +
-        //     googleUser.getBasicProfile().getName();
-      }, function(error) {
-        // alert(JSON.stringify(error, undefined, 2));
-      });
-}
-startApp();
-
-
-
-
-// TO RENDER FB LOGIN BUTTON
-
-function getUserData() {
-	FB.api('/me', {fields: 'name,email'}, (response) => {
-		document.getElementById('response').innerHTML = 'Hello ' + response.name;
-	});
-}
-
-FB.init({
-  appId  : 748538615707937,
-  cookie : true, // enable cookies to allow the server to access the session
-  xfbml  : true,  // parse XFBML
-  version    : 'v9.0'
-  });
-  
-  document.getElementById('loginBtn').addEventListener('click', function() {
-      //do the login
-      FB.login(function(response) {
-          if (response.authResponse) {
-              //user just authorized your app
-              getUserData();
-          }
-      }, {scope: 'email,public_profile', return_scopes: true});
-  }, false);
-  
-
-
-
-
-//TO VALIDATE LOGIN FORM
-const emailfield = document.getElementById('emailInput')
-const password = document.getElementById('password')
-const loginButton = document.getElementById('loginButton')
-
-let emailTrue = false;
-let passwordTrue = false;
-
-emailfield.addEventListener('input', function(e){
-  const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-  const emailValue = e.target.value
-  const emailValidity = pattern.test(emailValue)
-
-  if(emailValidity){
-    emailTrue = true
-  }
-})
-
-password.addEventListener('input', function(e){
-  const passwordlength = e.target.value.length
-  if(passwordlength>=8 && passwordlength<=12){
-    passwordTrue = true
-    if(emailTrue === true && passwordTrue === true){
-      loginButton.disabled = false
-    }
-  }else{
-    loginButton.disabled = true
-  }
-})
-
-
-
-//TO OR NOT DISPLAY THE LOGIN MODAL
-const closeLoginModal = document.getElementById('loginModal')
-const closeLoginModalIcon = document.getElementById('closemodal')
-closeLoginModalIcon.addEventListener('click', function(){
-  closeLoginModal.style.display = 'none'
-})
-
-function openLoginModal(){
-  closeLoginModal.style.display = 'grid'
-}
 
 
 
@@ -536,6 +438,8 @@ carouselControlCounter +=1
 
 
 
+
+
 //section 5 testimonial carousel.
 $(document).ready(() =>{
   $('#slideshower .slicker').slick({
@@ -551,17 +455,17 @@ $(document).ready(() =>{
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 1
           }
         },
         {
@@ -574,4 +478,109 @@ $(document).ready(() =>{
       ]
   });
 });
+
+
+
+
+
+
+// TO RENDER THE GOOGLE LOGIN BUTTON
+var googleUser = {};
+var startApp = function() {
+  gapi.load('auth2', function(){
+    auth2 = gapi.auth2.init({
+      client_id: '335325138627-7r3tloqnen7dktbdk4bo366dgka207hi.apps.googleusercontent.com',
+      cookiepolicy: 'single_host_origin',
+    });
+    attachSignin(document.getElementById('customBtn'));
+  });
+};
+
+function attachSignin(element) {
+  // console.log(element.id);
+  auth2.attachClickHandler(element, {},
+      function(googleUser) {
+        // document.getElementById('name').innerText = "Signed in: " +
+        //     googleUser.getBasicProfile().getName();
+      }, function(error) {
+        // alert(JSON.stringify(error, undefined, 2));
+      });
+}
+startApp();
+
+
+
+
+// TO RENDER FB LOGIN BUTTON
+
+function getUserData() {
+	FB.api('/me', {fields: 'name,email'}, (response) => {
+		document.getElementById('response').innerHTML = 'Hello ' + response.name;
+	});
+}
+
+FB.init({
+  appId  : 748538615707937,
+  cookie : true, // enable cookies to allow the server to access the session
+  xfbml  : true,  // parse XFBML
+  version    : 'v9.0'
+  });
+  
+  document.getElementById('loginBtn').addEventListener('click', function() {
+      //do the login
+      FB.login(function(response) {
+          if (response.authResponse) {
+              //user just authorized your app
+              getUserData();
+          }
+      }, {scope: 'email,public_profile', return_scopes: true});
+  }, false);
+  
+
+
+
+
+//TO VALIDATE LOGIN FORM
+const emailfield = document.getElementById('emailInput')
+const password = document.getElementById('password')
+const loginButton = document.getElementById('loginButton')
+
+let emailTrue = false;
+let passwordTrue = false;
+
+emailfield.addEventListener('input', function(e){
+  const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  const emailValue = e.target.value
+  const emailValidity = pattern.test(emailValue)
+
+  if(emailValidity){
+    emailTrue = true
+  }
+})
+
+password.addEventListener('input', function(e){
+  const passwordlength = e.target.value.length
+  if(passwordlength>=8 && passwordlength<=12){
+    passwordTrue = true
+    if(emailTrue === true && passwordTrue === true){
+      loginButton.disabled = false
+    }
+  }else{
+    loginButton.disabled = true
+  }
+})
+
+
+
+//TO OR NOT DISPLAY THE LOGIN MODAL
+const closeLoginModal = document.getElementById('loginModal')
+const closeLoginModalIcon = document.getElementById('closemodal')
+closeLoginModalIcon.addEventListener('click', function(){
+  closeLoginModal.style.display = 'none'
+})
+
+function openLoginModal(){
+  closeLoginModal.style.display = 'grid'
+}
+
 

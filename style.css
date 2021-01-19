@@ -69,6 +69,7 @@ nav{
 }
 
 #topLogo{
+    margin: 0;
     font-family: 'Galada', cursive;
     font-size: 2rem;
     cursor: pointer;
@@ -76,6 +77,11 @@ nav{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+#controlIcons{
+    display: none;
 }
 
 .topbarItems{
@@ -86,7 +92,7 @@ nav{
     font-size: 0.95rem;
     font-weight: 800;
     padding-bottom: 4px;        /*to make some space for the overflow hidden and prevent the border div from being hidden*/
-    overflow: hidden;
+    overflow: hidden;           
 }
 
 .topbarborder{  
@@ -300,7 +306,6 @@ nav{
     align-items: center;
     text-align: center;
     position: relative;
-    animation: bgshake 1s infinite ease-in-out;
 }
 
 #headingI{
@@ -346,10 +351,10 @@ nav{
     text-shadow: 0 0 2px white;
     letter-spacing: 1.5px;
     outline: none;
-    border: 2px solid #000000b3;
+    border: 2px solid #D2D6A8;
     border-radius: 4px;
-    box-shadow: 0 0 4px 2px #0000004d;
-    transition: 1s;
+    box-shadow: 0 0 4px 2px #022235;
+    transition: 0.5s;
     cursor: pointer;
 }
 
@@ -424,12 +429,11 @@ nav{
 .sec2icon1,.sec2icon2,.sec2icon3{
     display: grid;
     place-items: center;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 50px;
     height: 50px;
     font-size: 1.5625em;
     background-color: #0e0d0d0d;
-    margin-bottom: 20px;
 }
 
 .sec2icon1{
@@ -1070,7 +1074,7 @@ hr{
     display: grid;
     place-items: center;
     background-color: #ffffff1c;
-    border-radius: 3px;
+    border-radius: 5px;
     font-weight: bold;
     position: relative;
 }
@@ -1105,7 +1109,7 @@ hr{
     justify-content: center;
     padding: 50px 0;
     background-color: #ff4400;
-    border-bottom: 1px solid wheat;
+    border-bottom: 3px solid #FFE3B0;
 }
 
 .sectionVII div{
@@ -1115,6 +1119,7 @@ hr{
 }
 
 .sectionVII h1{
+    text-align: center;
     font-size: 1.875em;
     font-weight: bolder;
     margin-right: 20px;
@@ -1152,7 +1157,7 @@ hr{
 /* FOOTER */
 footer{
     width: 100%;
-    height: 50vh;
+    height: auto;
     padding: 32px 15px;
     background-color: #02051E;
 }
@@ -1167,7 +1172,57 @@ footer{
     padding: 16px;
     text-align: left;
     color: white;
+    margin-bottom: 30px;
+}
 
+.midNote{
+    background-color: #ff4400;
+    width: auto;
+    margin: 0 -15px;
+    padding: 40px 15px;
+    border-bottom: 3px solid #FFE3B0;
+    border-top: 3px solid #FFE3B0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.innerContent1{
+    width: fit-content;
+}
+
+.innerContent1 h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.innerContent1 p{
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #000000b3;
+}
+
+.innerContent2{
+    width: 130px;
+    border-bottom: 2.5px solid black;
+    font-size: 1.1em;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.innerContent2 span{
+    font-size: 20px;
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.1s;
+}
+
+.innerContent2:hover span{
+    right: -10px;
 }
 
 #endNote{
@@ -1383,9 +1438,10 @@ nav{
     bottom: 3%;
     grid-template-columns: auto auto;
     justify-items: center;
-    grid-column-gap: 50px;
+    grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
+
 .brandLogoWrap img:nth-of-type(1){
     width: 130px;
 }
@@ -1396,7 +1452,7 @@ nav{
     width: 100px;
 }
 .brandLogoWrap img:nth-of-type(4){
-    width: 130px;
+    width: 140px;
 }
 
 
@@ -2112,7 +2168,6 @@ hr{
 }
 
 
-
 @media (max-height: 640px){
     
 
@@ -2234,7 +2289,408 @@ padding-right: 42px;
 
 
 
+
 }
+
+
+@media screen and (min-device-width: 375px) and (max-device-width: 812px)  and (orientation: landscape) { 
+ 
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px;
+        position: static;
+    }
+    
+    #mobileNav{
+        font-size: 1.5rem;
+        line-height: 3rem;
+        margin-top: 10%;
+        margin-left: 1.24px;
+    }
+    
+    .topbarItems{
+        display: none;
+    }
+    
+    #iconLogoDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #topLogo{
+        position: static;
+        margin-top: 10px;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }  
+    
+    #controlIcons{
+        display: block;
+        position: relative;
+    }
+    
+    
+        /* ANIMATED MENU HAMBURGER */
+    #hamburger{
+        visibility: hidden;
+    }
+    
+    #controlIcons label,#controlIcons label::before,#controlIcons label::after{
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: #000000;
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+    }
+    
+    #controlIcons label{
+        cursor: pointer;
+        width: 35px;
+        height: 3px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    #controlIcons label::before{
+        content: '';
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+    }
+    
+    #controlIcons label::after{
+        content: '';
+        transform: translateY(8px);
+        -webkit-transform: translateY(8px);
+    }
+    
+    #hamburger:checked + label{
+        height: 0;
+        transform: translateX(0px);
+    }
+    
+    #hamburger:checked + label::before{
+        transform: rotate(45deg) translate(0px);
+        -webkit-transform: rotate(45deg) translate(0px);
+    }
+    
+    #hamburger:checked + label::after{
+        transform: rotate(-45deg) translate(0px);
+        -webkit-transform: rotate(-45deg) translate(0px);
+    }
+
+
+
+    /* SECTION 1 */
+
+    #sectionI{
+        height: auto;
+        display: flex;
+        padding: 150px 20px 100px 20px;
+    }
+    
+    #headingI{
+        font-size: 1.8em;
+        margin-top: 0;
+    }
+    
+    #headingII{
+        font-size: 1em;
+        font-weight: 600;
+        margin: 20px 0;
+        color: #000000cc;
+    }
+    
+    #buttonI{
+        padding: 15px 39px;
+    }
+    
+    .ladysvg, .mansvg{
+        display: none;
+    }
+    
+    .brandLogoWrap{
+        grid-template-columns: 20% 7% 16% 20%;
+        grid-column-gap: 35px;
+    }
+    
+    
+
+
+
+/* SECTION II */
+.sectionII{
+    height: auto;
+}
+
+.section2headtext{
+    margin: 8% 0;
+}
+
+.section2maindiv{
+    margin-top: 0px;
+    grid-template-columns: 70%;
+}
+
+.sec2icon1,.sec2icon2,.sec2icon3{
+    margin: 0 auto 20px auto;
+}
+
+.sec2eldivs h2{
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+.sec2eldivs p{
+    font-size: 1.1em;
+    color: #555d5e;
+    padding-bottom: 50px;
+}
+
+
+
+
+
+/* SECTION III */
+.sec3heading{
+    margin-bottom: 40px;
+}
+
+.sec3heading h4{
+    margin-bottom: 15px;
+}
+
+.sec3heading h1{
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.sec3heading p{
+    font-size: 1em;
+    padding: 0 10%;
+}
+
+.expertinfosection{
+    height: auto;
+    grid-template-columns: auto;
+    grid-column-gap: 0;
+    margin-bottom: 60px;
+}
+
+.expertinfosection.transition{
+    height: auto;
+    grid-template-columns: auto;
+    margin-bottom: 60px;
+    animation: fade 0.5s;
+}
+
+.expertAppearance{
+    margin: 0 auto;
+    width: 410px;
+    height: 430px;
+}
+
+.expertname{
+    margin: 40px 0 20px 0;
+    font-size: 2em;
+    display: block;
+}
+
+.expertjob{
+    display: block;
+    padding-left: 0px;
+    margin-bottom: 25px;
+}
+
+.expertinfosection p{
+    font-size: 1em;
+}
+
+.extraexpertdetails{
+    font-size: 1.1875em;
+    margin: 60px auto 0 auto;
+}
+
+.featuredexperts{
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.expertbiolink{
+    width: 65px;
+    height: 65px;
+    margin: 30px 5px 0 5px;
+}
+
+
+
+
+
+
+
+
+/* SECTION IV */
+.sectionIV{
+    padding: 80px 20px 50px 20px;
+}
+
+.sectionIV h5{
+    margin-bottom: 20px;
+}
+
+.sectionIV h1{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.secivmaindiv{
+    grid-template-columns: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+}
+
+.secivimgdiv{
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.secivimgdiv img{
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.secivtextdiv{
+    height: 200px;
+}
+
+.secivtextdiv p{
+    justify-self: center;
+}
+
+.VAS{
+    transform: translate(-50%);
+    left: 50%;
+    font-size: 1.1em;
+}
+    
+
+
+
+
+
+
+
+/* SECTION V */
+.sectionV h1{
+    font-size: 35px;
+    text-align: center;
+}
+        
+.slidermaindiv{
+    margin-bottom: 60px;
+}
+
+.sliderDescription{
+    width: 85%;
+    height: auto;
+    padding: 20px 10px;
+}
+
+
+hr{
+    margin: 0 auto 25px auto;
+    width: 90%;
+    background-color: #c9cbe0;
+}
+
+.clientBrandDiv{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clientBrand{
+    margin: 0 0 25px 0;
+    padding: 5px 10px;
+}
+
+
+.testimonialSlider{
+    margin: 50px auto 10px auto;
+    height: 420px;
+}
+
+#slideshower{
+    position: relative;
+    height: 100%;
+}
+
+.gradientBG{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, white, transparent 10%), linear-gradient(to left, white, transparent 10%);
+}
+
+.slicker{
+    height: auto;
+}
+
+.tName{
+    margin-right: 15px;
+}
+
+.testifier .material-icons{
+    color: gold;
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.footdetail{
+    padding: 15px 3%;
+}
+
+
+
+
+
+/* SECTION VI */
+
+.sectionVI h4{
+    font-size: 0.9em;
+}
+
+.sectionVI h1{
+    width: auto;
+}
+
+.brandsSupported{
+    margin-bottom: 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: unset;
+    justify-content: stretch;
+    grid-gap: 20px;
+}
+
+.brandsLogo{
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+}
+
 
 @media screen and (min-width: 768px) and (max-width:1024px){
     
@@ -2338,45 +2794,267 @@ label::after{
 /* SECTION 1 */
 
 #sectionI{
-    padding: 0 5px;
-    background-size: 100vw 100vh;
+    width: 100%;
+    height: auto;
+    padding: 0 5%;
 }
 
 #headingI{
-    font-size: 2em;
+    font-size: 2.1em;
     line-height: 1.3em;
+    margin-top: 25%;
 }
 
 #headingII{
-    font-size: 1rem;
-    margin: 35px 0 30px 0;
-    color: #000000cc;
+    font-weight: 600;
+    margin: 35px 0 50px 0;
+}
+
+#buttonDivI{
+    position: relative;
+    margin-bottom: 65%;
+}
+
+.mansvg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
 }
 
 .ladysvg{
     display: none;
 }
 
-.mansvg{
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 15%;
-}
-
 .brandLogoWrap{
     position: absolute;
-    bottom: 5%;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 17% 7% 15% 20%;
+    bottom: 3%;
+    grid-template-columns: 20% 8% 15% 25%;
     grid-column-gap: 50px;
 }
 
 .brandLogoWrap img{
     width: inherit;
 }
+
+
+
+
+
+
+/* SECTION II */
+.sectionII{
+    height: auto;
+    padding: 20px 10px;
+}
+
+.section2headtext{
+    margin: 50px 0;
+}
+
+.section2maindiv{
+    margin-top: 0px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
+}
+
+.sec2icon1,.sec2icon2,.sec2icon3{
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+}
+
+.sec2eldivs h2{
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+.sec2eldivs p{
+    font-size: 1em;
+    color: #555d5e;
+}
+
+
+
+
+
+
+/* SECTION III */
+.sec3heading{
+    margin-bottom: 100px;
+}
+
+.sec3heading h1{
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.sec3heading p{
+    font-size: 1em;
+    padding: 0 15%;
+}
+
+.expertinfosection{
+    height: 410px;
+    grid-template-columns: 390px auto;
+    grid-column-gap: 20px;
+
+}
+
+.expertinfosection.transition{
+    height: 40vh;
+    grid-template-columns: 390px auto;
+    grid-column-gap: 20px;
+}
+
+.expertimgbg{
+    height: 390px;
+    width: 370px;
+}
+
+.expertimg{
+    height: 390px;
+    width: 370px;
+}
+
+.expertname{
+    margin: 30px 0 10px 0;
+    font-size: 2em;
+    display: block;
+}
+
+.expertjob{
+    display: block;
+    padding-left: 0px;
+    margin-bottom: 30px;
+}
+
+.expertbiolink{
+    width: 75px;
+    height: 75px;
+    margin: 30px 9px 0 9px;
+}
+
+
+
+
+
+/* SECTION IV */
+.sectionIV{
+    padding: 50px 20px 50px 20px;
+}
+
+.sectionIV h5{
+    margin-bottom: 20px;
+}
+
+.sectionIV h1{
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.secivmaindiv{
+    grid-template-columns: 50% auto;
+    grid-column-gap: 20px;
+    padding: 10px 0;
+}
+
+.secivimgdiv{
+    height: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.secivimgdiv img{
+    width: 550px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.secivtextdiv{
+    height: 250px;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+}
+
+.secivtextdiv p{
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+/* SECTION V */        
+.sectionIV{
+    padding: 100px 20px 10px 20px;
+}
+
+.slidermaindiv{
+    height: 650px;
+}
+
+hr{
+    margin: 0 auto 25px auto;
+    width: 90%;
+    background-color: #c9cbe0;
+}
+
+.clientBrandDiv{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clientBrand{
+    margin: 0 0 25px 0;
+    padding: 5px 10px;
+}
+
+.testimonialSlider{
+    width: 95%;
+    margin: 50px auto 30px auto;
+}
+
+#slideshower{
+    height: 400px;
+}
+
+.reviews{
+    padding-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+/* SECTION VI */
+.sectionVI h1{
+    width: auto;
+}
+
+.brandsSupported{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: unset;
+    justify-content: stretch;
+    grid-gap: 20px;
+    position: relative;
+}
+
+.brandsLogo{
+    height: 100px;
+}
+
 
 
 

@@ -38,15 +38,15 @@
         <nav id="headered">
 
             <div>
-                <span class="topbarItems">How It Works <div class="topbarborder"></div> </span>
+                <span class="topbarItems" tabindex="2">How It Works <div class="topbarborder"></div> </span>
 
-                <span class="topbarItems">Pricing <div class="topbarborder"></div> </span>
+                <span class="topbarItems" tabindex="3">Pricing <div class="topbarborder"></div> </span>
 
-                <span class="topbarItems">Our Services <div class="topbarborder"></div> </span>
+                <span class="topbarItems" tabindex="4">Our Services <div class="topbarborder"></div> </span>
             </div>
 
             <div id="iconLogoDiv">
-                <span id="topLogo">SteamFlex</span>
+                <span id="topLogo" tabindex="1">SteamFlex</span>
                 <span id="controlIcons">
                     <input id="hamburger" type="checkbox">
                     <label for="hamburger"></label>
@@ -54,9 +54,9 @@
             </div>
 
             <div>
-                <span class="topbarItems" onclick='openLoginModal()'>Login <div class="topbarborder"></div> </span>
-                <span class="topbarItems">Meet The Experts <div class="topbarborder"></div> </span>
-                <span class="topbarItems">Reviews <div class="topbarborder"></div> </span>
+                <span class="topbarItems"  tabindex="5" onclick='openLoginModal()'>Login <div class="topbarborder"></div> </span>
+                <span class="topbarItems" tabindex="6">Meet The Experts <div class="topbarborder"></div> </span>
+                <span class="topbarItems"  tabindex="7">Reviews <div class="topbarborder"></div> </span>
             </div>
 
 
@@ -89,7 +89,7 @@
                 The Best Crop Of Freelancers On The Internet.
             </h4>
 
-            <div id="buttonDivI">
+            <div id="buttonDivI" tabindex="8">
                 <button id="buttonI">Get Started!<i class="fas fa-angle-double-right" id="arrowRight"></i></button>
             </div>
 
@@ -153,7 +153,6 @@
         </section>
 
 
-
         <section class="sectionII">
             <h1 class="section2headtext">Freelancers you can always bank on</h1>
 
@@ -161,8 +160,8 @@
 
                 <div class="sec2eldivs">
                     <div class="sec2icon1" data-aos="fade" data-aos-duration="1000">
-                        <i class="fa fa-filter" id="filterIcon"></i>
-                    </div>
+                        <i class="fa fa-filter" id="filterIcon" aria-hidden="true"></i>
+                        </div>
 
                     <h2>
                         Pre-Assessed Experts
@@ -232,8 +231,10 @@
                             the joy of bringing someone's dream and vision to fruition."
                         </p>
 
-                        <div class="extraexpertdetails">Learn More <span class="allicons"><i
-                                    class="fa fa-long-arrow-right" aria-hidden="true"></i></span></div>
+                        <div class="extraexpertdetails">
+                            Learn More 
+                            <span class="allicons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span> 
+                        </div>
 
                     </div>
 
@@ -705,7 +706,6 @@
     </main>
 
 
-
     <footer>
 
         <div id="footer">
@@ -748,6 +748,25 @@
                 <p>support@steamflex.in</p>
                 <p>+2349030442453</p>
 
+            </div>
+
+        </div>
+
+        <div class="midNote">
+
+            <div class="innerContent1">
+                <h1>
+                    Join SteamFlex as an Expert
+                </h1>
+
+                <p>Get Jobs, get paid. Don't 
+                    waste another second searching 
+                    for work online.</p>
+            </div>
+
+            <div  class="innerContent2">
+                Learn More 
+                <span class="material-icons">east</span>
             </div>
 
         </div>
