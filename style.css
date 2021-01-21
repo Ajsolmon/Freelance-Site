@@ -295,11 +295,10 @@ nav{
 #sectionI{
     width: 100%;
     height: 125vh;
-    background-color: #0572aa;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%231885bc' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23009bba' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%233caeb0' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%2373bea5' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23a4cba1' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23d2d6a8' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-color: #076fad;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%233986ae' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%236a9dae' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%239cb5af' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23cdccaf' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23ffe3b0' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -405,7 +404,7 @@ nav{
 
 /* SECTION II */
 .sectionII{
-    background-color: #ffa6004f;
+    background-color: #ffe3b0;
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -1194,7 +1193,7 @@ footer{
 
 .innerContent1 h1{
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .innerContent1 p{
@@ -1414,7 +1413,6 @@ nav{
 
 #sectionI{
     padding: 0 5px;
-    background-size: 100vw 100vh;
     height: 100vh;
 }
 
@@ -2073,59 +2071,87 @@ hr{
 
 
     /* FOOTER */
-    footer{
-        height: auto;
-        padding: 2rem 2rem;
-        background-color: #02051E;
-        text-align: center;
-        outline: 1px solid white;
-    }
-    
-    #footer{
-        flex-direction: column;
-        align-items: center;
-        background-color: #03032e;
-    }
-    
-    #endNote{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+footer{
+    height: auto;
+    padding: 2em 2em;
+    background-color: #02051E;
+    text-align: center;
+    outline: 1px solid white;
+}
 
-    #endNote p:first-of-type{
-        font-size: 15px;
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: white;
-    }
+#footer{
+    flex-direction: column;
+    align-items: center;
+    background-color: #03032e;
+}
 
-    #endNote p:nth-of-type(2){
-        font-size: 14.5px;
-        color: #ffffffda;
-    }
+#endNote{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-    #endNote p{
-        font-size: 14.5px;
-        padding: 0.5rem;
-        color: #ffffffda;
-    }
+.midNote{
+    margin: 0 -2em;
+    padding: 40px 15px;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+}
 
-    .footerDiv{
-        width: 100%;
-        text-align: center;
-        margin-bottom: 50px;
-    }
+.innerContent1{
+    margin-bottom: 20px;
+}
 
-    .footerDiv h3{
-        margin-bottom: 0.6rem;
-    }
+.innerContent1 h1{
+    font-size: 2em;
+    margin-bottom: 25px;
+}
 
-    .footerDiv p{
-        width: 100%;
-        border: none;
-    }
+.innerContent1 p{
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.innerContent2{
+    margin: 0 auto;
+    width: 115px;
+    text-align: left;
+}
+
+#endNote p:first-of-type{
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#endNote p:nth-of-type(2){
+    font-size: 14.5px;
+    color: #ffffffda;
+}
+
+#endNote p{
+    font-size: 14.5px;
+    padding: 0.5rem;
+    color: #ffffffda;
+}
+
+.footerDiv{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footerDiv h3{
+    margin-bottom: 0.6rem;
+}
+
+.footerDiv p{
+    width: 100%;
+    border: none;
+}
     
 #endNote div:first-of-type{
     width: 100%;
@@ -2689,6 +2715,87 @@ hr{
 
 
 
+
+
+
+
+/* FOOTER */
+footer{
+    padding: 35px 15px;
+}
+
+#footer{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.footerDiv{
+    width: 30%;
+    margin-top: 20px;
+}
+
+.midNote{
+    grid-template-columns: auto;
+    align-items: center;
+    text-align: center;
+    margin: 0 -15px;
+}
+
+.innerContent1{
+    margin-bottom: 20px;
+}
+
+.innerContent1 h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.innerContent1 p{
+    font-size: 1.15em;
+}
+
+.innerContent2{
+    margin: 0 auto;
+    width: 120px;
+    text-align: left;
+}
+
+#endNote{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 17px 0 17px;
+}
+
+#endNote div:first-of-type{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#fbIcon{
+    left: 10px;
+}
+
+#birdIcon{
+    left: 50px;
+}
+
+#inIcon{
+    left: 100px;
+}
+
+#endNote div:last-of-type {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#endNote div:last-of-type p{
+    font-size: 0.875em;
+}
+
 }
 
 
@@ -3057,6 +3164,88 @@ hr{
 
 
 
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: auto;
+    padding: 32px 15px;
+    background-color: #02051E;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #03032e;
+    border-radius: 24px 2px;
+    box-shadow: 0 0 5px #ff4400;
+    padding: 16px;
+    text-align: left;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.midNote{
+    grid-template-columns: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.innerContent1{
+    margin-bottom: 20px;
+}
+
+.innerContent1 h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.innerContent1 p{
+    font-size: 1.15em;
+}
+
+.innerContent2{
+    margin: 0 auto;
+    width: 120px;
+    text-align: left;
+}
+
+#endNote{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 17px 0 17px;
+}
+
+#endNote div:first-of-type{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#fbIcon{
+    left: 10px;
+}
+
+#birdIcon{
+    left: 50px;
+}
+
+#inIcon{
+    left: 100px;
+}
+
+#endNote div:last-of-type {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#endNote div:last-of-type p{
+    font-size: 0.875em;
+}
 
 
 }
