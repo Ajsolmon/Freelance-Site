@@ -319,19 +319,38 @@ background-size: cover;
     color: #000000cc;
 }
 
-#buttonDivI{
-    position: relative;
-}
-
 #arrowRight{
-    position: absolute;
-    top: 52%;
-    transform: translateY(-50%);
-    right: 20px;
+    transform: translateX(5px);
     color: white;
     transition: 1s;
     -webkit-animation: move 1s infinite linear;
-            animation: move 1s infinite linear;
+    animation: move 1s infinite linear;
+}
+
+#arrowLeft{
+    transform: translateX(-5px);
+    color: white;
+    transition: 1s;
+    -webkit-animation: movel 1s infinite linear;
+    animation: movel 1s infinite linear;
+}
+
+@-webkit-keyframes movel{
+    0%{
+
+    }
+    100%{
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes movel{
+    0%{
+
+    }
+    100%{
+        transform: translateX(-15px);
+    }
 }
 
 @-webkit-keyframes move{
@@ -339,7 +358,7 @@ background-size: cover;
 
     }
     100%{
-        right: 10px;
+        transform: translateX(15px);
     }
 }
 
@@ -348,7 +367,7 @@ background-size: cover;
 
     }
     100%{
-        right: 10px;
+        transform: translateX(15px);
     }
 }
 
@@ -373,9 +392,9 @@ background-size: cover;
     text-shadow: 0 0 2px transparent;
 }
 
-#buttonI:hover #arrowRight{
+#buttonI:hover #arrowRight, #buttonI:hover #arrowLeft{
     -webkit-animation-play-state: paused;
-            animation-play-state: paused;
+    animation-play-state: paused;
     color: black;
 }
 
