@@ -330,7 +330,17 @@ background-size: cover;
     right: 20px;
     color: white;
     transition: 1s;
-    animation: move 1s infinite linear;
+    -webkit-animation: move 1s infinite linear;
+            animation: move 1s infinite linear;
+}
+
+@-webkit-keyframes move{
+    0%{
+
+    }
+    100%{
+        right: 10px;
+    }
 }
 
 @keyframes move{
@@ -364,7 +374,8 @@ background-size: cover;
 }
 
 #buttonI:hover #arrowRight{
-    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
     color: black;
 }
 
@@ -524,7 +535,18 @@ background-size: cover;
     justify-content: center;
     grid-column-gap: 20px;
     margin-bottom: 60px;
-    animation: fade 0.5s;
+    -webkit-animation: fade 0.5s;
+            animation: fade 0.5s;
+}
+
+@-webkit-keyframes fade{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
 }
 
 @keyframes fade{
@@ -588,6 +610,7 @@ background-size: cover;
 }
 
 .extraexpertdetails{
+    width: -webkit-fit-content;
     width: fit-content;
     width: -moz-fit-content;
     font-size: 1.1875em;
@@ -667,6 +690,8 @@ background-size: cover;
 }
 
 .secivimgdiv{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;
 }
@@ -895,6 +920,8 @@ hr{
 
 .clientBrand{
     margin-top: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -1046,6 +1073,8 @@ hr{
 }
 
 .sectionVI h4{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 20px auto;
     font-size: 0.875em;
@@ -1189,6 +1218,8 @@ footer{
 }
 
 .innerContent1{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -1295,6 +1326,8 @@ footer{
     font-size: 14px;
     border-bottom: 0 solid white;
     transition: all 0.1s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -2515,7 +2548,8 @@ padding-right: 42px;
     height: auto;
     grid-template-columns: auto;
     margin-bottom: 60px;
-    animation: fade 0.5s;
+    -webkit-animation: fade 0.5s;
+            animation: fade 0.5s;
 }
 
 .expertAppearance{
@@ -2584,6 +2618,8 @@ padding-right: 42px;
 }
 
 .secivimgdiv{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;
 }
@@ -2963,7 +2999,8 @@ label::after{
 .section2maindiv{
     margin-top: 0px;
     display: grid;
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
     grid-template-columns: auto auto auto;
     margin-bottom: 30px;
 }
@@ -3070,6 +3107,8 @@ label::after{
 }
 
 .secivimgdiv{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;
     overflow: hidden;
