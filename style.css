@@ -147,6 +147,7 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 0 0 10%;
+    align-items: center;
 }
 
 
@@ -2459,6 +2460,87 @@ padding-right: 42px;
     }
 
 
+/* SIGN IN MODAL */
+#loginModal{
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.modal{
+    min-width: 60vw;
+    height: 80%;
+}
+
+  /* FB LOGIN */
+
+  #loginBtn{
+    margin-top: 0;
+}
+  
+
+
+
+#loginChoice{
+    padding-top: 20px;
+}
+
+#loginform{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+#loginform p{
+    margin: 0;
+    font-size: 14px;
+}
+
+#modalLinks{
+    color:#1877F2;
+    cursor: pointer;
+}
+
+#loginform input{
+    padding: 20px 10px;
+    border-radius: 3px;
+    border: none;
+    margin: 5px 0 15px 0;
+}
+
+#loginform label{
+    font-size: 1em;
+}
+
+#closemodal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#closemodal:hover{
+    transform: rotate(90deg);
+}
+
+#loginButton{
+    background-color: #fcae1f;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+#loginButton:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
 
     /* SECTION 1 */
 
@@ -2855,6 +2937,21 @@ nav{
     flex-direction: column;
     padding: 8px 16px;
     position: static;
+}
+
+#mobileNav{
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 1.24px;
+}
+
+.mobileItems{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
 }
 
 .topbarItems{
