@@ -64,6 +64,7 @@ nav{
     display: none;
 }
 
+
 #topLogo{
     margin: 0;
     font-family: 'Galada', cursive;
@@ -101,6 +102,40 @@ nav{
     transition: left 0.5s;
 }
 
+#clickMe{
+    position: absolute;
+    bottom: 0;
+    font-size: 0.7em;
+    font-weight: bold;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(to top, #659999, #FFE3B0);
+    background: linear-gradient(to top, #659999, #FFE3B0);
+    text-align: center;
+    padding: 5px 10px;
+    animation: shake 1s linear infinite;
+}
+
+#clickMe::after{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 4px;
+    margin-left: -4px;
+    border-style: solid;
+    border-color: transparent transparent #FFE3B0 transparent;
+}
+
+@keyframes shake{
+    25%{
+        transform: rotate(15deg);
+    }
+
+    75%{
+        transform: rotate(-15deg);
+    }
+}
+
 .topbarItems:hover .topbarborder{
     left: 0;
 }
@@ -121,7 +156,7 @@ nav{
     -webkit-backdrop-filter: blur( 4.0px );
     display: none;
     place-items: center;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .modal{
@@ -206,8 +241,7 @@ nav{
   span.btnText{
     font-size: 14px;
     font-weight: bold;
-    padding-left: 5px;
-    padding-right: 42px;
+    padding: 12.1px 42px 12.4px 5px;
   }
   
   span.fbIcon{
@@ -217,7 +251,7 @@ nav{
     background-position: center;
     width: 36px;
     height: 36px;
-    padding-left: 5px;
+    padding: 10px 0 10px 5px;
   }
   
 
@@ -261,10 +295,10 @@ nav{
     position: absolute;
     top: 10px;
     right: 10px;
-    display: inline-block;
+    display: block;
     font-size: 20px;
     text-align: center;
-    transition: 0.1s;
+    transition: 0.2s;
     cursor: pointer;
 }
 
@@ -1413,6 +1447,9 @@ nav{
     position: relative;
 }
 
+#clickMe{
+    display: none;
+}
 
     /* ANIMATED MENU HAMBURGER */
 #hamburger{
@@ -2250,6 +2287,9 @@ footer{
 
 @media (max-height: 640px){
     
+#clickMe{
+    display: none;
+}
 
 /* SIGN IN MODAL */
 #loginModal{
@@ -2375,6 +2415,10 @@ padding-right: 42px;
 
 @media screen and (min-device-width: 375px) and (max-device-width: 812px)  and (orientation: landscape) { 
  
+#clickMe{
+    display: none;
+}
+
     nav{
         display: flex;
         flex-direction: column;
@@ -2932,6 +2976,10 @@ footer{
 
 @media screen and (min-width: 768px) and (max-width:1024px){
     
+#clickMe{
+    display: none;
+}
+
 nav{
     display: flex;
     flex-direction: column;

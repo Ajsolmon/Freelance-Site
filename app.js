@@ -572,15 +572,22 @@ password.addEventListener('input', function(e){
 
 
 
-//TO OR NOT DISPLAY THE LOGIN MODAL
-const closeLoginModal = document.getElementById('loginModal')
-const closeLoginModalIcon = document.getElementById('closemodal')
-closeLoginModalIcon.addEventListener('click', function(){
-  closeLoginModal.style.display = 'none'
+//TO CLOSE THE LOGIN MODAL
+const loginModal = document.getElementById('loginModal')
+const loginModalIcon = document.getElementById('closemodal')
+loginModalIcon.addEventListener('click', function(){
+  loginModal.style.transform = 'scale(1.5)'
+  loginModal.style.opacity = '0'
+
+  setTimeout(() => {
+    loginModal.style.display = 'none'
+  }, 200);
 })
 
 function openLoginModal(){
-  closeLoginModal.style.display = 'grid'
+  loginModal.style.display = 'grid'
+  loginModal.style.transform = 'scale(1)'
+  loginModal.style.opacity = '1'
 }
 
 
