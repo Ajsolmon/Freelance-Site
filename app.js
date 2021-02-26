@@ -3,12 +3,7 @@ const header = document.querySelector('.header');
 
 window.onscroll = function(){
     let scroll = window.scrollY
-    
-    if(scroll>50){
-        header.classList.add('active')
-    }else{
-        header.classList.remove('active')
-    }
+    scroll>50 ? header.classList.add('active') : header.classList.remove('active')
 }
 
 
@@ -43,49 +38,49 @@ const expertdetails = [
     expertname: "Tyler",
     expertjob: "Wordpress Expert",
     expertdetails: "\"I have been a Wordpress expert for over 6 years. It brings together my passion for creativity and my entrepreneurial spirit. There is nothing more rewarding than the joy of bringing someone's dream and vision to fruition.\"",
-    expertimage: "tyler-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/tyler-big_gMgS0_F1DBE_.png"
   },
   {
     expertname: "Diane",
     expertjob: "Senior Developer & Digital Strategist",
     expertdetails: "\"After 15 years in the digital space, I still love diving deep into client problems and coming up with the best technical, marketing or design solution to get them the results they need.\"",
-    expertimage: "diane-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/diane-big_PbCdE1yF_B.png"
   },
   {
     expertname: "Blake",
     expertjob: "Senior Frontend Developer",
     expertdetails: "\"From Wordpress to Shopify to fully custom solutions, over the past 4 years I have had the pleasure of helping many different clients with many different development needs. I love taking a client's goals and finding the solution that is right for them, no matter how complex.\"",
-    expertimage: "blake-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/blake-big_uYoWIfLHBegg.png"
   },
   {
     expertname: "Christy",
     expertjob: "Senior Squarespace Designer",
     expertdetails: "\"I’ve been working as a freelance web designer based in the US, Texas for over 15 years. I love working with small business owners to create beautiful, functional Squarespace websites.\"",
-    expertimage: "christy-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/christy-big_U9SktA847KI1.png"
   },
   {
     expertname: "Ming",
     expertjob: "Developer and Digital Marketer",
     expertdetails: "\"I'm full of new ideas but backed by years of experience working in marketing, design, digital and visual content for clients all around the world. I work with a variety of businesses, startups, and even individuals to help establish, grow and nurture their online presence. With each project, I take the time to understand my client’s needs and work from the perspective of their brand.\"",
-    expertimage: "ming-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/ming-big_2rhg9HaeEWmV.png"
   },
   {
     expertname: "Scott",
     expertjob: "Senior Developer",
     expertdetails: "\"I’m both a designer & developer with 10+ years of experience bringing brands to life online. I specialize in WordPress, Shopify, and Squarespace, and am well versed in the advantages and limitations of each platform. My joy comes from working with businesses to find solutions and strategies to communicate their message clearly and beautifully.\"",
-    expertimage: "scott-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/scott-big_0jeWgzbRf.png"
   },
   {
     expertname: "Irene",
     expertjob: "HubSpot Developer",
     expertdetails: "\"Passionate about web design and conversion rate optimization, my mission is to help ambitious companies all around the globe grow. In 2015, I won the HubSpot Hack-A-Thon and fell in love with this all-in-one software solution. My goal is to deliver websites of tomorrow that convert visitors into clients.\"",
-    expertimage: "irene-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/irene-big_NlzTxdIse.png"
   },
   {
     expertname: "Mowu",
     expertjob: "Shopify Designer & Developer",
     expertdetails: "\"For the past ten years, I’ve enjoyed blending my skills in strategy, design, and development to build brands and sites with compelling narratives for entrepreneurs around the world, ultimately bringing their visions to life.\"",
-    expertimage: "mowu-big.png"
+    expertimage: "https://ik.imagekit.io/jqo5wr6i8p6/mowu-big_4gmPHYTYARAe.png"
   }
 ]
 

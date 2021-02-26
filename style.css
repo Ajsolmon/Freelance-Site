@@ -108,10 +108,10 @@ nav{
     font-size: 0.7em;
     font-weight: bold;
     border-radius: 3px;
-    background: -webkit-linear-gradient(to top, #659999, #FFE3B0);
     background: linear-gradient(to top, #659999, #FFE3B0);
     text-align: center;
     padding: 5px 10px;
+    -webkit-animation: shake 1s linear infinite;
     animation: shake 1s linear infinite;
 }
 
@@ -124,6 +124,16 @@ nav{
     margin-left: -4px;
     border-style: solid;
     border-color: transparent transparent #FFE3B0 transparent;
+}
+
+@-webkit-keyframes shake{
+    25%{
+        transform: rotate(5deg);
+    }
+
+    75%{
+        transform: rotate(-5deg);
+    }
 }
 
 @keyframes shake{
@@ -857,14 +867,14 @@ nav{
 }
 
 #idred{
-    background-image: url('Rebecca.jpg'), linear-gradient(to right, #D3C9C7, #CBC3C1);
+    background-image: url('https://ik.imagekit.io/jqo5wr6i8p6/Rebecca_4TDgOFrEX92gs.jpg'), linear-gradient(to right, #D3C9C7, #CBC3C1);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
 #idyellow{
-    background-image: url('Sean.jpg'), linear-gradient(to right, #AAAEB1, #BBBFC2);
+    background-image: url('https://ik.imagekit.io/jqo5wr6i8p6/Sean_tfbwoiXQmS1q.jpg'), linear-gradient(to right, #AAAEB1, #BBBFC2);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -872,14 +882,14 @@ nav{
 
 #idgreen{
     background-color: #B9B8BF;
-    background-image: url('Janet.png');
+    background-image: url('https://ik.imagekit.io/jqo5wr6i8p6/Janet_gkNxGHlNT.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 5%;
 }
 
 #idblack{
-    background-image: url('Sen.jpg'), linear-gradient(to right, #C1BBC5, #B2A7B5);
+    background-image: url('https://ik.imagekit.io/jqo5wr6i8p6/Sen_-CHMdtF5bOrz.jpg'), linear-gradient(to right, #C1BBC5, #B2A7B5);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -887,7 +897,7 @@ nav{
 
 #idpurple{
     background-color: #ADADB4;
-    background-image: url('Seth.png');
+    background-image: url('https://ik.imagekit.io/jqo5wr6i8p6/Seth_i0NvmGKJD.png');
     background-repeat: no-repeat;
     background-size: 35%;
     background-position: 10%;
