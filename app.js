@@ -278,7 +278,7 @@ bioLink[7].addEventListener('click', function(){
 
 
 
-//ANIMATE SECTION V CAROUSEL
+//ANIMATE SECTION 5 CAROUSEL
 
 let leftstyle = 0
 
@@ -310,7 +310,7 @@ carouselCircle[0].addEventListener('click', ()=>{
 
     leftstyle = undefined
     carouselanim.style.left = 0 + '%'
-    carouselControlCounter = undefined
+    carouselControlCounter = NaN
 })
 
 carouselCircle[1].addEventListener('click', ()=>{
@@ -321,7 +321,7 @@ carouselCircle[1].addEventListener('click', ()=>{
     carouselCircle[4].style.backgroundColor = '#e0dbc9'
     leftstyle = undefined
     carouselanim.style.left = -100 + '%'
-    carouselControlCounter = undefined
+    carouselControlCounter = NaN
 })
 
 carouselCircle[2].addEventListener('click', ()=>{
@@ -332,7 +332,7 @@ carouselCircle[2].addEventListener('click', ()=>{
     carouselCircle[4].style.backgroundColor = '#e0dbc9'
     leftstyle = undefined
     carouselanim.style.left = -200 + '%'
-    carouselControlCounter = undefined
+    carouselControlCounter = NaN
 })
 
 carouselCircle[3].addEventListener('click', ()=>{
@@ -343,7 +343,7 @@ carouselCircle[3].addEventListener('click', ()=>{
     carouselCircle[4].style.backgroundColor = '#e0dbc9'
     leftstyle = undefined
     carouselanim.style.left = -300 + '%'
-    carouselControlCounter = undefined
+    carouselControlCounter = NaN
 })
 
 carouselCircle[4].addEventListener('click', ()=>{
@@ -354,7 +354,7 @@ carouselCircle[4].addEventListener('click', ()=>{
     carouselCircle[3].style.backgroundColor = '#e0dbc9'
     leftstyle = undefined
     carouselanim.style.left = -400 + '%'
-    carouselControlCounter = undefined
+    carouselControlCounter = NaN
 })
 
 setInterval(function(){
